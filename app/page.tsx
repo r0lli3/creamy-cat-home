@@ -9,6 +9,7 @@ import { Testimonial } from '@/components/sections/Testimonial'
 import { Comparison } from '@/components/sections/Comparison'
 import { Team } from '@/components/sections/Team'
 import { FAQ } from '@/components/sections/FAQ'
+import { CTASection } from '@/components/sections/CTASection'
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <Comparison />
       <Team />
       <FAQ />
+      <CTASection />
     </main>
   )
 }
