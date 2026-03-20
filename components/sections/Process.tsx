@@ -27,7 +27,7 @@ export function Process() {
                 <div className="w-16 h-16 bg-cch-linen border-2 border-cch-oak rounded-2xl flex items-center justify-center text-2xl mb-6 relative z-10">
                   {s.icon}
                 </div>
-                <p className="text-xs font-medium text-cch-ash mb-2">Step {i + 1}</p>
+                <p className="text-xs font-medium text-cch-oak mb-2">Step {i + 1}</p>
                 <h3 className="font-serif text-xl font-bold text-cch-black mb-3">{s.title}</h3>
                 <p className="text-cch-black/60 text-sm leading-relaxed">{s.description}</p>
               </div>
