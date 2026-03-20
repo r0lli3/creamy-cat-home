@@ -13,7 +13,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Creamy Cat Home — Premium Cat Hotel',
+  title: 'Creamy Cat Home — Premium Cat Home',
   description: 'A luxury home away from home for your cat.',
 }
 

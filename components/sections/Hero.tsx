@@ -7,7 +7,7 @@ export function Hero() {
       <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center py-20">
         {/* Text */}
         <FadeIn>
-          <p className="text-sm font-medium text-cch-ash tracking-widest uppercase mb-6">Premium Cat Hotel</p>
+          <p className="text-sm font-medium text-cch-ash tracking-widest uppercase mb-6">Premium Cat Home</p>
           <h1 className="font-serif text-5xl md:text-7xl font-bold text-cch-black leading-tight mb-6">
             Premium cat care, done{' '}
             <em className="not-italic italic text-cch-ash">right</em>

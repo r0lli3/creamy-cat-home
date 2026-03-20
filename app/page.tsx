@@ -7,7 +7,6 @@ import { Results } from '@/components/sections/Results'
 import { Process } from '@/components/sections/Process'
 import { Testimonial } from '@/components/sections/Testimonial'
 import { Comparison } from '@/components/sections/Comparison'
-import { Team } from '@/components/sections/Team'
 import { FAQ } from '@/components/sections/FAQ'
 import { CTASection } from '@/components/sections/CTASection'
 import { Footer } from '@/components/sections/Footer'
@@ -24,7 +23,6 @@ export default function Home() {
       <Process />
       <Testimonial />
       <Comparison />
-      <Team />
       <FAQ />
       <CTASection />
       <Footer />
