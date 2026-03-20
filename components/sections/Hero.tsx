@@ -1,11 +1,12 @@
 import { Button } from '@/components/ui/Button'
+import { FadeIn } from '@/components/ui/FadeIn'
 
 export function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center pt-16 px-6">
       <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center py-20">
         {/* Text */}
-        <div>
+        <FadeIn>
           <p className="text-sm font-medium text-cch-ash tracking-widest uppercase mb-6">Premium Cat Hotel</p>
           <h1 className="font-serif text-5xl md:text-7xl font-bold text-cch-black leading-tight mb-6">
             Premium cat care, done{' '}
@@ -15,10 +16,10 @@ export function Hero() {
             A warm, loving home-away-from-home for your cat while you&apos;re away. Personalised care, daily updates, and total peace of mind.
           </p>
           <Button href="#contact" className="text-base px-8 py-4">Book a Stay</Button>
-        </div>
+        </FadeIn>
 
         {/* Visual */}
-        <div className="relative">
+        <FadeIn delay={0.15} className="relative">
           <div className="w-full aspect-square rounded-3xl bg-gradient-to-br from-cch-oak via-cch-linen to-cch-ash flex items-center justify-center">
             <span className="text-9xl">🐱</span>
           </div>
@@ -27,7 +28,7 @@ export function Hero() {
             <p className="text-xs text-cch-ash font-medium">Happy guests</p>
             <p className="text-cch-black font-bold">500+ cats hosted</p>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   )

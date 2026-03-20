@@ -1,4 +1,5 @@
 import { SectionLabel } from '@/components/ui/SectionLabel'
+import { FadeIn } from '@/components/ui/FadeIn'
 
 const caseStudies = [
   {
@@ -32,31 +33,33 @@ export function Results() {
     <section className="py-24 px-6">
       <div className="max-w-6xl mx-auto space-y-16">
         {caseStudies.map((cs, i) => (
-          <div key={i} className={`grid md:grid-cols-2 gap-12 items-center ${cs.flip ? 'md:[&>*:first-child]:order-2' : ''}`}>
-            {/* Text */}
-            <div>
-              <SectionLabel>{cs.label}</SectionLabel>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-cch-black mb-4">
-                {cs.heading}{' '}
-                <em className="italic">{cs.headingItalic}</em>
-                {cs.headingEnd ? ` ${cs.headingEnd}` : ''}
-              </h2>
-              <p className="text-cch-black/60 leading-relaxed mb-8">{cs.body}</p>
-              <div className="grid grid-cols-2 gap-6">
-                {cs.metrics.map(m => (
-                  <div key={m.label}>
-                    <p className="font-serif text-3xl font-bold text-cch-black">{m.value}</p>
-                    <p className="text-sm font-medium text-cch-black mt-1">{m.label}</p>
-                    <p className="text-xs text-cch-black/40 mt-0.5">{m.sub}</p>
-                  </div>
-                ))}
+          <FadeIn key={i}>
+            <div className={`grid md:grid-cols-2 gap-12 items-center ${cs.flip ? 'md:[&>*:first-child]:order-2' : ''}`}>
+              {/* Text */}
+              <div>
+                <SectionLabel>{cs.label}</SectionLabel>
+                <h2 className="font-serif text-3xl md:text-4xl font-bold text-cch-black mb-4">
+                  {cs.heading}{' '}
+                  <em className="italic">{cs.headingItalic}</em>
+                  {cs.headingEnd ? ` ${cs.headingEnd}` : ''}
+                </h2>
+                <p className="text-cch-black/60 leading-relaxed mb-8">{cs.body}</p>
+                <div className="grid grid-cols-2 gap-6">
+                  {cs.metrics.map(m => (
+                    <div key={m.label}>
+                      <p className="font-serif text-3xl font-bold text-cch-black">{m.value}</p>
+                      <p className="text-sm font-medium text-cch-black mt-1">{m.label}</p>
+                      <p className="text-xs text-cch-black/40 mt-0.5">{m.sub}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* Visual */}
+              <div className="bg-gradient-to-br from-cch-oak to-cch-ash rounded-3xl aspect-video flex items-center justify-center">
+                <span className="text-7xl">🐈</span>
               </div>
             </div>
-            {/* Visual */}
-            <div className="bg-gradient-to-br from-cch-oak to-cch-ash rounded-3xl aspect-video flex items-center justify-center">
-              <span className="text-7xl">🐈</span>
-            </div>
-          </div>
+          </FadeIn>
         ))}
       </div>
     </section>
