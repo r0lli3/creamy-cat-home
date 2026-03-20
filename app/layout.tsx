@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Inter, Fredoka } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({
@@ -7,9 +7,10 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const playfair = Playfair_Display({
+const fredoka = Fredoka({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  variable: '--font-fredoka',
+  weight: ['300', '400', '500', '600', '700'],
 })
 
 export const metadata: Metadata = {
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable} bg-cch-parchment text-cch-black font-sans antialiased`}>
+      <body className={`${inter.variable} ${fredoka.variable} bg-cch-parchment text-cch-black font-sans antialiased`}>
         {children}
       </body>
     </html>
