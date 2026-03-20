@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { FadeIn } from '@/components/ui/FadeIn'
 
@@ -12,6 +13,8 @@ const caseStudies = [
       { value: '500+', label: 'Cats Hosted', sub: 'Since we opened our doors' },
       { value: '98%', label: 'Return Rate', sub: 'From satisfied cat parents' },
     ],
+    photo: 'https://images.unsplash.com/photo-1759856897865-0396f224737c?auto=format&fit=crop&w=900&q=80',
+    photoAlt: 'A cat relaxing contentedly in a sunlit room',
     flip: false,
   },
   {
@@ -24,6 +27,8 @@ const caseStudies = [
       { value: '4.9★', label: 'Average Rating', sub: 'Across all reviews' },
       { value: '100%', label: 'Update Rate', sub: 'Daily photo updates sent' },
     ],
+    photo: 'https://images.unsplash.com/photo-1762396019211-3308400d4cae?auto=format&fit=crop&w=900&q=80',
+    photoAlt: 'Owner smiling at their cat, comfortable and at ease',
     flip: true,
   },
 ]
@@ -54,9 +59,14 @@ export function Results() {
                   ))}
                 </div>
               </div>
-              {/* Visual */}
-              <div className="bg-gradient-to-br from-cch-oak to-cch-ash rounded-3xl aspect-video flex items-center justify-center">
-                <span className="text-7xl">🐈</span>
+              {/* Photo */}
+              <div className="relative rounded-3xl overflow-hidden aspect-video">
+                <Image
+                  src={cs.photo}
+                  alt={cs.photoAlt}
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </FadeIn>

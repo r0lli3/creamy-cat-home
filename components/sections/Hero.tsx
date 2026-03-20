@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { FadeIn } from '@/components/ui/FadeIn'
 import { SocialProof } from '@/components/sections/SocialProof'
@@ -22,8 +23,14 @@ export function Hero() {
 
           {/* Visual */}
           <FadeIn delay={0.15} className="relative">
-            <div className="w-full aspect-square rounded-3xl bg-gradient-to-br from-cch-oak via-cch-linen to-cch-ash flex items-center justify-center">
-              <span className="text-9xl">🐱</span>
+            <div className="w-full aspect-square rounded-3xl overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1770489119613-c629b47063f2?auto=format&fit=crop&w=900&q=80"
+                alt="Cat being lovingly cared for at Creamy Cat Home"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
             {/* Floating badge */}
             <div className="absolute bottom-6 left-6 bg-cch-parchment rounded-2xl px-4 py-3 shadow-lg border border-cch-oak">
