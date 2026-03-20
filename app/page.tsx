@@ -3,6 +3,7 @@ import { Hero } from '@/components/sections/Hero'
 import { SocialProof } from '@/components/sections/SocialProof'
 import { Services } from '@/components/sections/Services'
 import { Mission } from '@/components/sections/Mission'
+import { Results } from '@/components/sections/Results'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <SocialProof />
       <Services />
       <Mission />
+      <Results />
     </main>
   )
 }
