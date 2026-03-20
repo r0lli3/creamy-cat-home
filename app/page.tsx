@@ -1,3 +1,9 @@
+import { Nav } from '@/components/sections/Nav'
+
 export default function Home() {
-  return <main></main>
+  return (
+    <main>
+      <Nav />
+    </main>
+  )
 }
