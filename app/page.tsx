@@ -8,6 +8,7 @@ import { Process } from '@/components/sections/Process'
 import { Testimonial } from '@/components/sections/Testimonial'
 import { Comparison } from '@/components/sections/Comparison'
 import { Team } from '@/components/sections/Team'
+import { FAQ } from '@/components/sections/FAQ'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Testimonial />
       <Comparison />
       <Team />
+      <FAQ />
     </main>
   )
 }
