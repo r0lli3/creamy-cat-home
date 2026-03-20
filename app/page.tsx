@@ -4,6 +4,7 @@ import { SocialProof } from '@/components/sections/SocialProof'
 import { Services } from '@/components/sections/Services'
 import { Mission } from '@/components/sections/Mission'
 import { Results } from '@/components/sections/Results'
+import { Process } from '@/components/sections/Process'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Services />
       <Mission />
       <Results />
+      <Process />
     </main>
   )
 }
