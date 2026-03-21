@@ -14,7 +14,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Creamy Cat Home — Premium Cat Home',
+  title: 'Creamy Cat Home - รับฝากแมว โรงแรมแมว ที่พักแมว ในกรุงเทพ ใกล้ลาดกระบัง',
   description: 'A luxury home away from home for your cat.',
   icons: {
     icon: '/creamyCatLogoTrans.png',
