@@ -39,19 +39,13 @@ export function Nav() {
         <div className="px-4 py-3 md:flex md:h-[4.5rem] md:items-center md:justify-between md:px-6 md:py-0">
           <div className="relative flex h-12 items-center justify-between md:h-auto md:flex-1">
             <a href="#home" aria-label="Creamy Cat Home" className="flex items-center gap-2.5">
-              <div
-                className={`relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border ${
-                  scrolled || open
-                    ? 'border-white/60 bg-white/80 text-cch-primary'
-                    : 'border-white/40 bg-white/55 text-cch-primary'
-                }`}
-              >
+              <div className="relative h-10 w-10 flex-shrink-0">
                 <Image
                   src="/creamyCatLogoTrans.png"
                   alt="Creamy Cat Home logo"
                   fill
-                  sizes="36px"
-                  className="scale-[1.55] object-contain"
+                  sizes="40px"
+                  className="object-contain"
                   priority
                 />
               </div>
