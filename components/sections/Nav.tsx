@@ -19,7 +19,7 @@ const languages = [
 export function Nav() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [language, setLanguage] = useState<(typeof languages)[number]['value']>('en')
+  const [language, setLanguage] = useState<(typeof languages)[number]['value']>('th')
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20)
