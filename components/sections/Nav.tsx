@@ -36,8 +36,8 @@ export function Nav() {
             : 'border-white/35 bg-[#fef9ef]/60 shadow-[0_18px_50px_-34px_rgba(110,89,46,0.16)] backdrop-blur-xl'
         }`}
       >
-        <div className="px-4 py-3 md:flex md:h-[4.5rem] md:items-center md:justify-between md:px-6 md:py-0">
-          <div className="relative flex h-12 items-center justify-between md:h-auto md:flex-1">
+        <div className="relative flex h-[4.5rem] items-center justify-between px-4 md:px-6">
+          <div className="flex items-center md:flex-1">
             <a href="#home" aria-label="Creamy Cat Home" className="flex items-center gap-2.5">
               <div className="relative h-10 w-10 flex-shrink-0">
                 <Image
@@ -50,70 +50,69 @@ export function Nav() {
                 />
               </div>
             </a>
-
-            <div className="pointer-events-none absolute left-1/2 -translate-x-1/2">
-              <span className="font-serif text-[0.95rem] font-extrabold italic tracking-tight text-brand-glow md:text-lg">
-                Creamy Cat Home
-              </span>
-            </div>
-
-            <nav className="hidden items-center gap-7 md:flex">
-              {links.map(link => (
-                <a key={link.label} href={link.href} className="text-sm font-medium text-cch-black/65 transition-colors hover:text-cch-black">
-                  {link.label}
-                </a>
-              ))}
-            </nav>
-
-            <div className="flex items-center gap-3">
-              <div className="hidden items-center rounded-full border border-white/55 bg-white/60 p-1 backdrop-blur md:flex">
-                {languages.map(option => (
-                  <button
-                    key={option.value}
-                    type="button"
-                    aria-label={option.label}
-                    aria-pressed={language === option.value}
-                    className={`flex h-9 w-9 items-center justify-center rounded-full text-lg transition-colors ${
-                      language === option.value
-                        ? 'bg-cch-primary/12 ring-1 ring-cch-primary/20'
-                        : 'opacity-65 hover:opacity-100'
-                    }`}
-                    onClick={() => setLanguage(option.value)}
-                  >
-                    <span aria-hidden>{option.icon}</span>
-                  </button>
-                ))}
-              </div>
-              <Button href="#contact" className="hidden md:inline-flex">Book a Stay</Button>
-              <button
-                aria-label="Toggle menu"
-                className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full border border-white/45 bg-white/55 shadow-[0_10px_24px_-18px_rgba(110,89,46,0.45)] md:hidden"
-                onClick={() => setOpen(o => !o)}
-              >
-                <span className={`block h-0.5 w-4 transition-all ${scrolled || open ? 'bg-cch-primary' : 'bg-cch-primary'} ${open ? 'translate-y-2 rotate-45' : ''}`} />
-                <span className={`block h-0.5 w-4 transition-all ${scrolled || open ? 'bg-cch-primary' : 'bg-cch-primary'} ${open ? 'opacity-0' : ''}`} />
-                <span className={`block h-0.5 w-4 transition-all ${scrolled || open ? 'bg-cch-primary' : 'bg-cch-primary'} ${open ? '-translate-y-2 -rotate-45' : ''}`} />
-              </button>
-            </div>
           </div>
 
-          <div className="mt-2 flex items-center justify-center gap-1.5 md:hidden">
-            {languages.map(option => (
-              <button
-                key={option.value}
-                type="button"
-                aria-label={option.label}
-                aria-pressed={language === option.value}
-                className={`flex h-8 w-8 items-center justify-center rounded-full border border-white/45 bg-white/58 text-base transition-colors ${
-                  language === option.value
-                    ? 'ring-1 ring-cch-primary/25'
-                    : 'opacity-75 hover:opacity-100'
-                }`}
-                onClick={() => setLanguage(option.value)}
-              >
-                <span aria-hidden>{option.icon}</span>
-              </button>
+          <div className="pointer-events-none absolute left-1/2 -translate-x-1/2">
+            <span className="font-serif text-[0.92rem] font-extrabold italic tracking-tight text-brand-glow md:text-lg">
+              Creamy Cat Home
+            </span>
+          </div>
+
+          <nav className="hidden items-center gap-7 md:flex md:flex-1 md:justify-center">
+            {links.map(link => (
+              <a key={link.label} href={link.href} className="text-sm font-medium text-cch-black/65 transition-colors hover:text-cch-black">
+                {link.label}
+              </a>
             ))}
+          </nav>
+
+          <div className="flex items-center gap-2 md:flex-1 md:justify-end md:gap-3">
+            <div className="hidden items-center rounded-full border border-white/55 bg-white/60 p-1 backdrop-blur md:flex">
+              {languages.map(option => (
+                <button
+                  key={option.value}
+                  type="button"
+                  aria-label={option.label}
+                  aria-pressed={language === option.value}
+                  className={`flex h-9 w-9 items-center justify-center rounded-full text-lg transition-colors ${
+                    language === option.value
+                      ? 'bg-cch-primary/12 ring-1 ring-cch-primary/20'
+                      : 'opacity-65 hover:opacity-100'
+                  }`}
+                  onClick={() => setLanguage(option.value)}
+                >
+                  <span aria-hidden>{option.icon}</span>
+                </button>
+              ))}
+            </div>
+            <div className="flex items-center gap-1 md:hidden">
+              {languages.map(option => (
+                <button
+                  key={option.value}
+                  type="button"
+                  aria-label={option.label}
+                  aria-pressed={language === option.value}
+                  className={`flex h-7 w-7 items-center justify-center rounded-full text-[0.95rem] transition-transform ${
+                    language === option.value
+                      ? 'scale-110'
+                      : 'opacity-70 hover:opacity-100'
+                  }`}
+                  onClick={() => setLanguage(option.value)}
+                >
+                  <span aria-hidden>{option.icon}</span>
+                </button>
+              ))}
+            </div>
+            <Button href="#contact" className="hidden md:inline-flex">Book a Stay</Button>
+            <button
+              aria-label="Toggle menu"
+              className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full border border-white/45 bg-white/55 shadow-[0_10px_24px_-18px_rgba(110,89,46,0.45)] md:hidden"
+              onClick={() => setOpen(o => !o)}
+            >
+              <span className={`block h-0.5 w-4 transition-all ${scrolled || open ? 'bg-cch-primary' : 'bg-cch-primary'} ${open ? 'translate-y-2 rotate-45' : ''}`} />
+              <span className={`block h-0.5 w-4 transition-all ${scrolled || open ? 'bg-cch-primary' : 'bg-cch-primary'} ${open ? 'opacity-0' : ''}`} />
+              <span className={`block h-0.5 w-4 transition-all ${scrolled || open ? 'bg-cch-primary' : 'bg-cch-primary'} ${open ? '-translate-y-2 -rotate-45' : ''}`} />
+            </button>
           </div>
         </div>
       </div>
