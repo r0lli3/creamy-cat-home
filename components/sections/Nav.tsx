@@ -10,9 +10,16 @@ const links = [
   { label: 'Questions', href: '#questions' },
 ]
 
+const languages = [
+  { value: 'en', label: 'EN' },
+  { value: 'th', label: 'TH' },
+  { value: 'jp', label: 'JP' },
+] as const
+
 export function Nav() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [language, setLanguage] = useState<(typeof languages)[number]['value']>('en')
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20)
@@ -64,6 +71,23 @@ export function Nav() {
           </nav>
 
           <div className="flex items-center gap-3">
+            <div className="hidden items-center rounded-full border border-white/55 bg-white/60 p-1 backdrop-blur md:flex">
+              {languages.map(option => (
+                <button
+                  key={option.value}
+                  type="button"
+                  aria-pressed={language === option.value}
+                  className={`rounded-full px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.18em] transition-colors ${
+                    language === option.value
+                      ? 'bg-cch-primary text-cch-parchment'
+                      : 'text-cch-black/55 hover:text-cch-black'
+                  }`}
+                  onClick={() => setLanguage(option.value)}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
             <Button href="#contact" className="hidden md:inline-flex">Book a Stay</Button>
             <button
               aria-label="Toggle menu"
@@ -78,11 +102,48 @@ export function Nav() {
         </div>
       </div>
 
+      <div className="mx-auto mt-2 flex max-w-6xl justify-end md:hidden">
+        <div className="flex items-center rounded-full border border-white/55 bg-[#fef9ef]/78 p-1 shadow-[0_12px_30px_-22px_rgba(34,28,22,0.25)] backdrop-blur">
+          {languages.map(option => (
+            <button
+              key={option.value}
+              type="button"
+              aria-pressed={language === option.value}
+              className={`rounded-full px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.18em] transition-colors ${
+                language === option.value
+                  ? 'bg-cch-primary text-cch-parchment'
+                  : 'text-cch-black/55 hover:text-cch-black'
+              }`}
+              onClick={() => setLanguage(option.value)}
+            >
+              {option.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {open && (
         <nav
           aria-label="mobile"
           className="mx-auto mt-3 flex max-w-6xl flex-col gap-4 rounded-[1.8rem] border border-white/45 bg-[#fef9ef]/90 px-5 py-5 shadow-[0_24px_60px_-36px_rgba(34,28,22,0.24)] backdrop-blur-xl md:hidden"
         >
+          <div className="flex items-center rounded-full border border-white/55 bg-white/65 p-1">
+            {languages.map(option => (
+              <button
+                key={option.value}
+                type="button"
+                aria-pressed={language === option.value}
+                className={`rounded-full px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.18em] transition-colors ${
+                  language === option.value
+                    ? 'bg-cch-primary text-cch-parchment'
+                    : 'text-cch-black/55 hover:text-cch-black'
+                }`}
+                onClick={() => setLanguage(option.value)}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
           {links.map(link => (
             <a key={link.label} href={link.href} className="text-sm font-medium text-cch-black/75" onClick={() => setOpen(false)}>
               {link.label}
