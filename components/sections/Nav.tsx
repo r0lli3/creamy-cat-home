@@ -52,8 +52,8 @@ export function Nav() {
             </a>
           </div>
 
-          <div className="pointer-events-none absolute left-1/2 -translate-x-1/2">
-            <span className="font-serif text-[0.92rem] font-extrabold italic tracking-tight text-brand-glow md:text-lg">
+          <div className="pointer-events-none absolute left-[46.75%] -translate-x-1/2 md:left-1/2">
+            <span className="font-serif text-[0.9rem] font-extrabold italic tracking-tight text-brand-glow md:text-lg">
               Creamy Cat Home
             </span>
           </div>
@@ -66,7 +66,7 @@ export function Nav() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2 md:flex-1 md:justify-end md:gap-3">
+          <div className="flex items-center gap-1 md:flex-1 md:justify-end md:gap-3">
             <div className="hidden items-center rounded-full border border-white/55 bg-white/60 p-1 backdrop-blur md:flex">
               {languages.map(option => (
                 <button
@@ -85,14 +85,14 @@ export function Nav() {
                 </button>
               ))}
             </div>
-            <div className="flex items-center gap-1 md:hidden">
+            <div className="flex items-center gap-0.5 md:hidden">
               {languages.map(option => (
                 <button
                   key={option.value}
                   type="button"
                   aria-label={option.label}
                   aria-pressed={language === option.value}
-                  className={`flex h-7 w-7 items-center justify-center rounded-full text-[0.95rem] transition-transform ${
+                  className={`flex h-6 w-6 items-center justify-center rounded-full text-[0.9rem] transition-transform ${
                     language === option.value
                       ? 'scale-110'
                       : 'opacity-70 hover:opacity-100'
@@ -106,12 +106,12 @@ export function Nav() {
             <Button href="#contact" className="hidden md:inline-flex">Book a Stay</Button>
             <button
               aria-label="Toggle menu"
-              className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full border border-white/45 bg-white/55 shadow-[0_10px_24px_-18px_rgba(110,89,46,0.45)] md:hidden"
+              className="flex h-10 w-8 flex-col items-end justify-center gap-1.5 md:hidden"
               onClick={() => setOpen(o => !o)}
             >
-              <span className={`block h-0.5 w-4 transition-all ${scrolled || open ? 'bg-cch-primary' : 'bg-cch-primary'} ${open ? 'translate-y-2 rotate-45' : ''}`} />
-              <span className={`block h-0.5 w-4 transition-all ${scrolled || open ? 'bg-cch-primary' : 'bg-cch-primary'} ${open ? 'opacity-0' : ''}`} />
-              <span className={`block h-0.5 w-4 transition-all ${scrolled || open ? 'bg-cch-primary' : 'bg-cch-primary'} ${open ? '-translate-y-2 -rotate-45' : ''}`} />
+              <span className={`block h-[2px] w-5 rounded-full transition-all ${scrolled || open ? 'bg-[#8B7347]' : 'bg-[#8B7347]'} ${open ? 'translate-y-2 rotate-45' : ''}`} />
+              <span className={`block h-[2px] w-5 rounded-full transition-all ${scrolled || open ? 'bg-[#8B7347]' : 'bg-[#8B7347]'} ${open ? 'opacity-0' : ''}`} />
+              <span className={`block h-[2px] w-5 rounded-full transition-all ${scrolled || open ? 'bg-[#8B7347]' : 'bg-[#8B7347]'} ${open ? '-translate-y-2 -rotate-45' : ''}`} />
             </button>
           </div>
         </div>

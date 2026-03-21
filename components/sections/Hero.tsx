@@ -16,26 +16,26 @@ export function Hero() {
               priority
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(29,28,22,0.22)_0%,rgba(29,28,22,0.1)_18%,rgba(29,28,22,0.18)_40%,rgba(29,28,22,0.88)_100%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(29,28,22,0.18)_0%,rgba(29,28,22,0.14)_18%,rgba(29,28,22,0.3)_42%,rgba(29,28,22,0.9)_100%)]" />
 
             <div className="absolute inset-x-6 bottom-[calc(env(safe-area-inset-bottom)+1.25rem)]">
-              <div className="inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.28em] text-white/92 backdrop-blur">
+              <div className="inline-flex rounded-full border border-white/24 bg-white/10 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.28em] text-[#f8f2e8] shadow-[0_1px_10px_rgba(0,0,0,0.22)] backdrop-blur">
                 Premium Cat Home
               </div>
 
-              <h1 className="mt-4 max-w-[12ch] font-serif text-[clamp(3rem,13vw,4.35rem)] font-extrabold leading-[0.88] tracking-[-0.05em] text-white">
+              <h1 className="mt-4 max-w-[12ch] font-serif text-[clamp(3rem,13vw,4.35rem)] font-extrabold leading-[0.88] tracking-[-0.05em] text-[#fffaf0] drop-shadow-[0_2px_14px_rgba(0,0,0,0.22)]">
                 Premium cat care, done right
               </h1>
 
-              <p className="mt-4 max-w-[19rem] text-[1rem] leading-7 text-cch-parchment/92">
+              <p className="mt-4 max-w-[19rem] text-[1rem] leading-7 text-[#f8f2e8] drop-shadow-[0_1px_10px_rgba(0,0,0,0.22)]">
                 A warm, loving home-away-from-home for your cat while you&apos;re away. Personalised care, daily updates, and total peace of mind.
               </p>
 
               <div className="mt-5 flex flex-wrap gap-2">
-                <span className="rounded-full border border-white/22 bg-white/10 px-3 py-1.5 text-[0.95rem] font-medium text-cch-parchment/92 backdrop-blur">
+                <span className="rounded-full border border-white/24 bg-white/10 px-3 py-1.5 text-[0.95rem] font-medium text-[#f8f2e8] shadow-[0_1px_10px_rgba(0,0,0,0.18)] backdrop-blur">
                   Calm private rooms
                 </span>
-                <span className="rounded-full border border-white/22 bg-white/10 px-3 py-1.5 text-[0.95rem] font-medium text-cch-parchment/92 backdrop-blur">
+                <span className="rounded-full border border-white/24 bg-white/10 px-3 py-1.5 text-[0.95rem] font-medium text-[#f8f2e8] shadow-[0_1px_10px_rgba(0,0,0,0.18)] backdrop-blur">
                   Daily photo updates
                 </span>
               </div>
