@@ -5,44 +5,76 @@ import { SocialProof } from '@/components/sections/SocialProof'
 
 export function Hero() {
   return (
-    <section id="home" className="min-h-screen flex flex-col pt-16">
-      <div className="flex-1 flex items-center px-6">
-        <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center py-20">
-          {/* Text */}
-          <FadeIn>
-            <p className="text-sm font-medium text-cch-oak tracking-widest uppercase mb-6">Premium Cat Home</p>
-            <h1 className="font-serif text-5xl md:text-7xl font-bold text-cch-black leading-tight mb-6">
-              Premium cat care, done{' '}
-              <em className="not-italic italic text-cch-oak">right</em>
+    <section id="home" className="relative isolate overflow-hidden px-4 pt-24 md:px-6 md:pt-28">
+      <div className="mx-auto max-w-6xl">
+        <div className="flex min-h-[calc(100svh-6.75rem)] flex-col gap-5 md:grid md:min-h-0 md:grid-cols-[1.02fr_0.98fr] md:items-center md:gap-8">
+          <FadeIn className="order-2 flex flex-1 flex-col md:order-1 md:block">
+            <div className="mb-4 inline-flex rounded-full border border-white/50 bg-white/55 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.28em] text-cch-primary backdrop-blur md:mb-6">
+              Premium Cat Home
+            </div>
+
+            <h1 className="max-w-xl font-serif text-[clamp(3.65rem,15vw,5.5rem)] font-extrabold leading-[0.88] text-cch-black md:text-7xl md:leading-[0.95]">
+              Premium cat care, done <span className="text-brand-glow">right</span>
             </h1>
-            <p className="text-cch-black/60 text-lg leading-relaxed mb-8 max-w-md">
+
+            <p className="mt-4 max-w-xl text-base leading-7 text-cch-muted md:mt-6 md:text-lg md:leading-8">
               A warm, loving home-away-from-home for your cat while you&apos;re away. Personalised care, daily updates, and total peace of mind.
             </p>
-            <Button href="#contact" className="text-base px-8 py-4">Book a Stay</Button>
+
+            <div className="mt-5 flex flex-wrap gap-2">
+              <span className="rounded-full border border-white/50 bg-white/55 px-3 py-1.5 text-xs font-medium text-cch-muted backdrop-blur">
+                Calm private rooms
+              </span>
+              <span className="rounded-full border border-white/50 bg-white/55 px-3 py-1.5 text-xs font-medium text-cch-muted backdrop-blur">
+                Daily photo updates
+              </span>
+            </div>
+
+            <div className="mt-auto pb-[calc(env(safe-area-inset-bottom)+0.25rem)] pt-6 md:mt-8 md:pb-0 md:pt-0">
+              <p className="mb-3 max-w-md text-sm leading-6 text-cch-black/55 md:mb-4">
+                Tap to book and we&apos;ll tailor the stay around your cat&apos;s routine.
+              </p>
+
+              <div className="grid gap-3 sm:max-w-md sm:grid-cols-2">
+                <Button href="#contact" className="justify-center py-4 text-base">
+                  Book a Stay
+                </Button>
+                <Button href="#services" variant="outline" className="justify-center py-4 text-base">
+                  Explore Services
+                </Button>
+              </div>
+            </div>
           </FadeIn>
 
-          {/* Visual */}
-          <FadeIn delay={0.15} className="relative">
-            <div className="w-full aspect-square rounded-3xl overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1770489119613-c629b47063f2?auto=format&fit=crop&w=900&q=80"
-                alt="Cat being lovingly cared for at Creamy Cat Home"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-            {/* Floating badge */}
-            <div className="absolute bottom-6 left-6 bg-cch-parchment rounded-2xl px-4 py-3 shadow-lg border border-cch-oak">
-              <p className="text-xs text-cch-oak font-medium">Happy guests</p>
-              <p className="text-cch-black font-bold">500+ cats hosted</p>
+          <FadeIn delay={0.15} className="order-1 md:order-2">
+            <div className="editorial-shadow relative overflow-hidden rounded-[2rem] p-3 md:rounded-[2.25rem] md:p-4">
+              <div className="relative h-[41svh] min-h-[18rem] max-h-[27rem] overflow-hidden rounded-[1.6rem] md:aspect-[0.92] md:h-auto md:max-h-none md:rounded-[2rem]">
+                <Image
+                  src="https://images.unsplash.com/photo-1770489119613-c629b47063f2?auto=format&fit=crop&w=900&q=80"
+                  alt="Cat being lovingly cared for at Creamy Cat Home"
+                  fill
+                  priority
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(34,28,22,0.06)_0%,rgba(34,28,22,0.12)_34%,rgba(34,28,22,0.52)_100%)]" />
+              </div>
+
+              <div className="pointer-events-none absolute inset-x-8 bottom-9">
+                <span className="mb-3 inline-flex rounded-full border border-white/30 bg-white/20 px-3 py-1 text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white backdrop-blur-md">
+                  Boutique Sanctuary
+                </span>
+                <h2 className="max-w-sm font-serif text-3xl font-extrabold leading-tight text-white drop-shadow md:text-4xl">
+                  The warmest place for your cat.
+                </h2>
+              </div>
             </div>
           </FadeIn>
         </div>
       </div>
 
-      {/* Ticker — anchored to bottom of hero, always above the fold */}
-      <SocialProof />
+      <div className="relative mx-auto mt-8 max-w-6xl overflow-hidden rounded-[2rem] border border-white/45 bg-white/45 px-4 py-1 backdrop-blur md:mt-10 md:px-6">
+        <SocialProof />
+      </div>
     </section>
   )
 }

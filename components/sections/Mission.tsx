@@ -4,16 +4,15 @@ import { FadeIn } from '@/components/ui/FadeIn'
 
 export function Mission() {
   return (
-    <section className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="px-4 py-10 md:px-6 md:py-16">
+      <div className="mx-auto max-w-6xl">
         <FadeIn>
-          <div className="bg-cch-linen rounded-3xl p-10 md:p-16 border border-cch-oak">
+          <div className="soft-ui-card rounded-[2rem] p-8 md:p-14">
             <SectionLabel>Our mission</SectionLabel>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-cch-black mb-8 max-w-2xl">
-              Turning worried owners into{' '}
-              <em className="italic">confident</em> cat parents
+            <h2 className="mb-8 max-w-2xl font-serif text-4xl font-extrabold tracking-tight text-cch-black md:text-5xl">
+              Turning worried owners into <em className="italic">confident</em> cat parents
             </h2>
-            <div className="grid md:grid-cols-2 gap-8 text-cch-black/60 text-base leading-relaxed mb-10">
+            <div className="mb-10 grid gap-8 text-base leading-8 text-cch-muted md:grid-cols-2">
               <p>
                 We know how hard it is to leave your cat behind. That&apos;s why we&apos;ve built a space that feels less like a kennel and more like a second home — warm, calm, and full of love.
               </p>
@@ -23,7 +22,7 @@ export function Mission() {
             </div>
             <div className="flex items-center gap-3">
               <IconBox size="sm">🐾</IconBox>
-              <span className="font-serif font-bold text-cch-black text-lg">Creamy Cat Home</span>
+              <span className="font-serif text-lg font-extrabold text-cch-black">Creamy Cat Home</span>
             </div>
           </div>
         </FadeIn>

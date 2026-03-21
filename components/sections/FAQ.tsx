@@ -29,27 +29,26 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(null)
 
   return (
-    <section className="py-24 px-6">
-      <div className="max-w-3xl mx-auto">
+    <section id="questions" className="px-4 py-20 md:px-6">
+      <div className="mx-auto max-w-3xl">
         <SectionLabel>Questions</SectionLabel>
-        <h2 className="font-serif text-4xl md:text-5xl font-bold text-cch-black mb-12">
-          Frequently Asked{' '}
-          <em className="italic">Questions</em>
+        <h2 className="mb-12 font-serif text-4xl font-extrabold tracking-tight text-cch-black md:text-5xl">
+          Frequently Asked <em className="italic">Questions</em>
         </h2>
         <div className="space-y-3">
           {faqs.map((faq, i) => (
-            <div key={i} className="bg-cch-linen rounded-2xl border border-cch-oak overflow-hidden">
+            <div key={i} className="soft-ui-card overflow-hidden rounded-[1.75rem]">
               <button
-                className="w-full flex items-center justify-between px-6 py-5 text-left"
+                className="flex w-full items-center justify-between px-6 py-5 text-left"
                 onClick={() => setOpen(open === i ? null : i)}
               >
-                <span className="font-serif font-bold text-cch-black">{faq.q}</span>
-                <div className="w-8 h-8 bg-cch-black rounded-lg flex items-center justify-center text-cch-parchment text-lg flex-shrink-0 ml-4">
+                <span className="font-serif font-extrabold text-cch-black">{faq.q}</span>
+                <div className="ml-4 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-white/55 bg-white/65 text-lg text-cch-primary">
                   {open === i ? '−' : '+'}
                 </div>
               </button>
               {open === i && (
-                <div className="px-6 pb-5 text-cch-black/60 text-sm leading-relaxed border-t border-cch-oak pt-4">
+                <div className="border-t border-white/55 px-6 pb-5 pt-4 text-sm leading-7 text-cch-muted">
                   {faq.a}
                 </div>
               )}

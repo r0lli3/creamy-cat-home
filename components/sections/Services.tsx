@@ -21,26 +21,46 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="services" className="px-4 py-20 md:px-6">
+      <div className="mx-auto max-w-6xl">
         <FadeIn>
           <SectionLabel>Services</SectionLabel>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-cch-black mb-16 max-w-xl">
-            How we care for your{' '}
-            <em className="italic">cat</em>
+          <h2 className="mb-12 max-w-xl font-serif text-4xl font-extrabold tracking-tight text-cch-black md:text-5xl">
+            How we care for your <em className="italic">cat</em>
           </h2>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <div className="grid md:grid-cols-3 gap-6">
-            {services.map(s => (
-              <div key={s.title} className="bg-cch-linen rounded-2xl p-8 border border-cch-oak">
-                <div className="w-12 h-12 bg-cch-parchment rounded-xl flex items-center justify-center text-2xl mb-6 border border-cch-oak">
-                  {s.icon}
+          <div className="grid gap-5 md:grid-cols-[1.1fr_0.9fr]">
+            <div className="soft-ui-card rounded-[2rem] p-6 md:p-8">
+              <div className="mb-5 flex items-start justify-between gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-[1.25rem] border border-white/60 bg-[linear-gradient(135deg,#F5E0BA_0%,#DFCA9B_100%)] text-2xl text-cch-primary shadow-[0_12px_24px_-16px_rgba(110,89,46,0.45)]">
+                  {services[0].icon}
                 </div>
-                <h3 className="font-serif text-xl font-bold text-cch-black mb-3">{s.title}</h3>
-                <p className="text-cch-black/60 text-sm leading-relaxed">{s.description}</p>
+                <span className="rounded-full border border-white/55 bg-white/65 px-2.5 py-1 text-[0.6rem] font-bold uppercase tracking-[0.24em] text-cch-primary">
+                  Premium
+                </span>
               </div>
-            ))}
+              <h3 className="font-serif text-2xl font-extrabold text-cch-black">{services[0].title}</h3>
+              <p className="mt-3 max-w-md text-sm leading-7 text-cch-muted">{services[0].description}</p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-1">
+              <div className="soft-ui-card rounded-[1.75rem] p-5">
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-[1rem] border border-white/60 bg-white/65 text-xl text-cch-primary">
+                  {services[1].icon}
+                </div>
+                <h3 className="font-serif text-xl font-extrabold text-cch-black">{services[1].title}</h3>
+                <p className="mt-2 text-sm leading-6 text-cch-muted">{services[1].description}</p>
+              </div>
+
+              <div className="soft-ui-card-dark rounded-[1.75rem] p-5 text-cch-parchment">
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-[1rem] border border-white/20 bg-white/15 text-xl">
+                  {services[2].icon}
+                </div>
+                <h3 className="font-serif text-xl font-extrabold">{services[2].title}</h3>
+                <p className="mt-2 text-sm leading-6 text-cch-parchment/80">{services[2].description}</p>
+              </div>
+            </div>
           </div>
         </FadeIn>
       </div>

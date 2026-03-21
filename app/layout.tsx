@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Fredoka } from 'next/font/google'
+import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({
@@ -7,21 +7,26 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const fredoka = Fredoka({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  variable: '--font-fredoka',
-  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-plus-jakarta',
+  weight: ['400', '500', '600', '700', '800'],
 })
 
 export const metadata: Metadata = {
   title: 'Creamy Cat Home — Premium Cat Home',
   description: 'A luxury home away from home for your cat.',
+  icons: {
+    icon: '/creamyCatLogoTrans.png',
+    shortcut: '/creamyCatLogoTrans.png',
+    apple: '/creamyCatLogoTrans.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${fredoka.variable} bg-cch-parchment text-cch-black font-sans antialiased`}>
+      <body className={`${inter.variable} ${plusJakartaSans.variable} bg-cch-parchment text-cch-black font-sans antialiased`}>
         {children}
       </body>
     </html>

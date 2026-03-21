@@ -9,27 +9,24 @@ const steps = [
 
 export function Process() {
   return (
-    <section className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="px-4 py-20 md:px-6">
+      <div className="mx-auto max-w-6xl">
         <FadeIn>
           <SectionLabel>How we work</SectionLabel>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-cch-black mb-16 max-w-xl">
-            We like to keep things{' '}
-            <em className="italic">simple</em>
+          <h2 className="mb-12 max-w-xl font-serif text-4xl font-extrabold tracking-tight text-cch-black md:text-5xl">
+            We like to keep things <em className="italic">simple</em>
           </h2>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <div className="grid md:grid-cols-3 gap-8 relative">
-            {/* Connecting line (desktop) */}
-            <div className="hidden md:block absolute top-8 left-[calc(16.67%+1rem)] right-[calc(16.67%+1rem)] h-px bg-cch-oak" />
+          <div className="grid gap-5 md:grid-cols-3">
             {steps.map((s, i) => (
-              <div key={s.title} className="relative">
-                <div className="w-16 h-16 bg-cch-linen border-2 border-cch-oak rounded-2xl flex items-center justify-center text-2xl mb-6 relative z-10">
+              <div key={s.title} className="soft-ui-card rounded-[1.8rem] p-6">
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-[1.2rem] border border-white/60 bg-white/65 text-2xl text-cch-primary">
                   {s.icon}
                 </div>
-                <p className="text-xs font-medium text-cch-oak mb-2">Step {i + 1}</p>
-                <h3 className="font-serif text-xl font-bold text-cch-black mb-3">{s.title}</h3>
-                <p className="text-cch-black/60 text-sm leading-relaxed">{s.description}</p>
+                <p className="mb-2 text-xs font-bold uppercase tracking-[0.24em] text-cch-primary/70">Step {i + 1}</p>
+                <h3 className="mb-3 font-serif text-xl font-extrabold text-cch-black">{s.title}</h3>
+                <p className="text-sm leading-7 text-cch-muted">{s.description}</p>
               </div>
             ))}
           </div>

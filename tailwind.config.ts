@@ -9,14 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'cch-parchment': '#F7F5F2',
-        'cch-linen': '#E9E3DA',
-        'cch-oak': '#D8C3A5',
-        'cch-ash': '#A8B5A2',
-        'cch-black': '#222222',
+        'cch-parchment': '#FEF9EF',
+        'cch-linen': '#F2EDE4',
+        'cch-oak': '#DFCA9B',
+        'cch-ash': '#C6BCA9',
+        'cch-black': '#1D1C16',
+        'cch-primary': '#6E592E',
+        'cch-primary-deep': '#57441B',
+        'cch-surface': '#FFFFFF',
+        'cch-muted': '#4D463B',
       },
       fontFamily: {
-        serif: ['var(--font-fredoka)', 'Georgia', 'serif'],
+        serif: ['var(--font-plus-jakarta)', 'Georgia', 'serif'],
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
     },
