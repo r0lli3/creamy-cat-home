@@ -43,7 +43,7 @@ export function Nav() {
                 alt="Creamy Cat Home logo"
                 fill
                 sizes="36px"
-                className="object-contain p-2"
+                className="scale-[1.55] object-contain"
                 priority
               />
             </div>
