@@ -1,9 +1,14 @@
+'use client'
+
 import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { FadeIn } from '@/components/ui/FadeIn'
 import { SocialProof } from '@/components/sections/SocialProof'
+import { useLanguage } from '@/components/providers/LanguageProvider'
 
 export function Hero() {
+  const { copy } = useLanguage()
+
   return (
     <section id="home" className="relative isolate overflow-hidden md:px-6 md:pt-28">
       <div className="md:mx-auto md:max-w-6xl">
@@ -11,7 +16,7 @@ export function Hero() {
           <div className="relative left-1/2 min-h-[100svh] w-screen -translate-x-1/2 overflow-hidden">
             <Image
               src="https://images.unsplash.com/photo-1770489119613-c629b47063f2?auto=format&fit=crop&w=900&q=80"
-              alt="Cat being lovingly cared for at Creamy Cat Home"
+              alt={copy.hero.imageAlt}
               fill
               priority
               className="object-cover"
@@ -20,23 +25,23 @@ export function Hero() {
 
             <div className="absolute inset-x-6 bottom-[calc(env(safe-area-inset-bottom)+1.25rem)]">
               <div className="inline-flex rounded-full border border-white/24 bg-white/10 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.28em] text-[#f8f2e8] shadow-[0_1px_10px_rgba(0,0,0,0.22)] backdrop-blur">
-                Premium Cat Home
+                {copy.hero.eyebrow}
               </div>
 
               <h1 className="mt-4 max-w-[12ch] font-serif text-[clamp(3rem,13vw,4.35rem)] font-extrabold leading-[0.88] tracking-[-0.05em] text-[#fffaf0] drop-shadow-[0_2px_14px_rgba(0,0,0,0.22)]">
-                Premium cat care, done right
+                {copy.hero.title}
               </h1>
 
               <p className="mt-4 max-w-[19rem] text-[1rem] leading-7 text-[#f8f2e8] drop-shadow-[0_1px_10px_rgba(0,0,0,0.22)]">
-                A warm, loving home-away-from-home for your cat while you&apos;re away. Personalised care, daily updates, and total peace of mind.
+                {copy.hero.body}
               </p>
 
               <div className="mt-5 flex flex-wrap gap-2">
                 <span className="rounded-full border border-white/24 bg-white/10 px-3 py-1.5 text-[0.95rem] font-medium text-[#f8f2e8] shadow-[0_1px_10px_rgba(0,0,0,0.18)] backdrop-blur">
-                  Calm private rooms
+                  {copy.hero.pills[0]}
                 </span>
                 <span className="rounded-full border border-white/24 bg-white/10 px-3 py-1.5 text-[0.95rem] font-medium text-[#f8f2e8] shadow-[0_1px_10px_rgba(0,0,0,0.18)] backdrop-blur">
-                  Daily photo updates
+                  {copy.hero.pills[1]}
                 </span>
               </div>
 
@@ -46,11 +51,9 @@ export function Hero() {
                   variant="outline"
                   className="justify-center border-white/28 bg-white/14 py-4 text-base text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.18)] hover:bg-white/18 hover:text-white"
                 >
-                  Explore Services
+                  {copy.hero.ctaServices}
                 </Button>
-                <Button href="#contact" className="justify-center py-4 text-base">
-                  Book a Stay
-                </Button>
+                <Button href="#contact" className="justify-center py-4 text-base">{copy.hero.ctaBook}</Button>
               </div>
             </div>
           </div>
@@ -59,32 +62,30 @@ export function Hero() {
         <div className="hidden md:grid md:grid-cols-[1.02fr_0.98fr] md:items-center md:gap-8">
           <FadeIn className="md:block">
             <div className="mb-6 inline-flex rounded-full border border-white/50 bg-white/55 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.28em] text-cch-primary backdrop-blur">
-              Premium Cat Home
+              {copy.hero.eyebrow}
             </div>
 
             <h1 className="max-w-xl font-serif text-7xl font-extrabold leading-[0.95] tracking-tight text-cch-black">
-              Premium cat care, done <span className="text-brand-glow">right</span>
+              {copy.hero.title}
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-8 text-cch-muted">
-              A warm, loving home-away-from-home for your cat while you&apos;re away. Personalised care, daily updates, and total peace of mind.
+              {copy.hero.body}
             </p>
 
             <div className="mt-4 flex flex-wrap gap-2">
               <span className="rounded-full border border-white/50 bg-white/55 px-3 py-1.5 text-[0.95rem] font-medium text-cch-muted backdrop-blur">
-                Calm private rooms
+                {copy.hero.pills[0]}
               </span>
               <span className="rounded-full border border-white/50 bg-white/55 px-3 py-1.5 text-[0.95rem] font-medium text-cch-muted backdrop-blur">
-                Daily photo updates
+                {copy.hero.pills[1]}
               </span>
             </div>
 
             <div className="mt-8 grid gap-3 sm:max-w-md sm:grid-cols-2">
-              <Button href="#contact" className="justify-center py-4 text-base">
-                Book a Stay
-              </Button>
+              <Button href="#contact" className="justify-center py-4 text-base">{copy.hero.ctaBook}</Button>
               <Button href="#services" variant="outline" className="justify-center py-4 text-base">
-                Explore Services
+                {copy.hero.ctaServices}
               </Button>
             </div>
           </FadeIn>
@@ -94,7 +95,7 @@ export function Hero() {
               <div className="relative aspect-[0.92] overflow-hidden rounded-[2rem]">
                 <Image
                   src="https://images.unsplash.com/photo-1770489119613-c629b47063f2?auto=format&fit=crop&w=900&q=80"
-                  alt="Cat being lovingly cared for at Creamy Cat Home"
+                  alt={copy.hero.imageAlt}
                   fill
                   priority
                   className="object-cover"
@@ -104,7 +105,7 @@ export function Hero() {
 
               <div className="pointer-events-none absolute inset-x-8 bottom-9">
                 <h2 className="max-w-sm font-serif text-4xl font-extrabold leading-tight text-white drop-shadow">
-                  The warmest place for your cat.
+                  {copy.hero.overlayTitle}
                 </h2>
               </div>
             </div>

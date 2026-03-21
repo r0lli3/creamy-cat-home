@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
+import { LanguageProvider } from '@/components/providers/LanguageProvider'
 import './globals.css'
 
 const inter = Inter({
@@ -25,9 +26,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="th">
       <body className={`${inter.variable} ${plusJakartaSans.variable} bg-cch-parchment text-cch-black font-sans antialiased`}>
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   )

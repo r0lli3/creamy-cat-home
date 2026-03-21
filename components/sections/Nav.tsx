@@ -2,13 +2,8 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
-
-const links = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Questions', href: '#questions' },
-]
+import { useLanguage } from '@/components/providers/LanguageProvider'
+import { Language } from '@/content/siteCopy'
 
 const languages = [
   { value: 'en', label: 'English', icon: '🇬🇧' },
@@ -19,7 +14,7 @@ const languages = [
 export function Nav() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [language, setLanguage] = useState<(typeof languages)[number]['value']>('th')
+  const { language, setLanguage, copy } = useLanguage()
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20)
@@ -38,11 +33,11 @@ export function Nav() {
       >
         <div className="relative flex h-[4.5rem] items-center justify-between px-4 md:px-6">
           <div className="flex items-center md:flex-1">
-            <a href="#home" aria-label="Creamy Cat Home" className="flex items-center gap-2.5">
+            <a href="#home" aria-label={copy.nav.brand} className="flex items-center gap-2.5">
               <div className="relative h-10 w-10 flex-shrink-0">
                 <Image
                   src="/creamyCatLogoTrans.png"
-                  alt="Creamy Cat Home logo"
+                  alt={`${copy.nav.brand} logo`}
                   fill
                   sizes="40px"
                   className="object-contain"
@@ -54,12 +49,12 @@ export function Nav() {
 
           <div className="pointer-events-none absolute left-[46.75%] -translate-x-1/2 md:left-1/2">
             <span className="font-serif text-[0.9rem] font-extrabold italic tracking-tight text-brand-glow md:text-lg">
-              Creamy Cat Home
+              {copy.nav.brand}
             </span>
           </div>
 
           <nav className="hidden items-center gap-7 md:flex md:flex-1 md:justify-center">
-            {links.map(link => (
+            {copy.nav.links.map(link => (
               <a key={link.label} href={link.href} className="text-sm font-medium text-cch-black/65 transition-colors hover:text-cch-black">
                 {link.label}
               </a>
@@ -79,7 +74,7 @@ export function Nav() {
                       ? 'bg-cch-primary/12 ring-1 ring-cch-primary/20'
                       : 'opacity-65 hover:opacity-100'
                   }`}
-                  onClick={() => setLanguage(option.value)}
+                  onClick={() => setLanguage(option.value as Language)}
                 >
                   <span aria-hidden>{option.icon}</span>
                 </button>
@@ -97,13 +92,13 @@ export function Nav() {
                       ? 'scale-110'
                       : 'opacity-70 hover:opacity-100'
                   }`}
-                  onClick={() => setLanguage(option.value)}
+                  onClick={() => setLanguage(option.value as Language)}
                 >
                   <span aria-hidden>{option.icon}</span>
                 </button>
               ))}
             </div>
-            <Button href="#contact" className="hidden md:inline-flex">Book a Stay</Button>
+            <Button href="#contact" className="hidden md:inline-flex">{copy.nav.book}</Button>
             <button
               aria-label="Toggle menu"
               className="flex h-10 w-8 flex-col items-end justify-center gap-1.5 md:hidden"
@@ -134,18 +129,18 @@ export function Nav() {
                     ? 'ring-1 ring-cch-primary/25'
                     : 'opacity-75 hover:opacity-100'
                 }`}
-                onClick={() => setLanguage(option.value)}
+                onClick={() => setLanguage(option.value as Language)}
               >
                 <span aria-hidden>{option.icon}</span>
               </button>
             ))}
           </div>
-          {links.map(link => (
+          {copy.nav.links.map(link => (
             <a key={link.label} href={link.href} className="text-sm font-medium text-cch-black/75" onClick={() => setOpen(false)}>
               {link.label}
             </a>
           ))}
-          <Button href="#contact" className="mt-2 w-full justify-center">Book a Stay</Button>
+          <Button href="#contact" className="mt-2 w-full justify-center">{copy.nav.book}</Button>
         </nav>
       )}
     </header>

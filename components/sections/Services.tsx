@@ -1,32 +1,20 @@
+'use client'
+
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { FadeIn } from '@/components/ui/FadeIn'
-
-const services = [
-  {
-    icon: '🌙',
-    title: 'Overnight Stays',
-    description: 'Your cat sleeps in a cozy, private room with soft bedding, toys, and all the attention they deserve.',
-  },
-  {
-    icon: '☀️',
-    title: 'Daycare',
-    description: 'Drop off your cat for a day of play, socialisation, and naps in a warm, supervised environment.',
-  },
-  {
-    icon: '✂️',
-    title: 'Grooming',
-    description: 'From brush-outs to full grooms, we keep your cat looking and feeling their absolute best.',
-  },
-]
+import { useLanguage } from '@/components/providers/LanguageProvider'
 
 export function Services() {
+  const { copy } = useLanguage()
+  const services = copy.services.items
+
   return (
     <section id="services" className="px-4 py-20 md:px-6">
       <div className="mx-auto max-w-6xl">
         <FadeIn>
-          <SectionLabel>Services</SectionLabel>
+          <SectionLabel>{copy.services.label}</SectionLabel>
           <h2 className="mb-12 max-w-xl font-serif text-4xl font-extrabold tracking-tight text-cch-black md:text-5xl">
-            How we care for your <em className="italic">cat</em>
+            {copy.services.title}
           </h2>
         </FadeIn>
         <FadeIn delay={0.1}>
@@ -37,7 +25,7 @@ export function Services() {
                   {services[0].icon}
                 </div>
                 <span className="rounded-full border border-white/55 bg-white/65 px-2.5 py-1 text-[0.6rem] font-bold uppercase tracking-[0.24em] text-cch-primary">
-                  Premium
+                  {copy.services.premium}
                 </span>
               </div>
               <h3 className="font-serif text-2xl font-extrabold text-cch-black">{services[0].title}</h3>

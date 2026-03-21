@@ -1,42 +1,21 @@
 'use client'
 import { useState } from 'react'
 import { SectionLabel } from '@/components/ui/SectionLabel'
-
-const faqs = [
-  {
-    q: 'How long can my cat stay?',
-    a: 'Cats can stay from a single overnight up to several weeks. We accommodate short city breaks and long international holidays alike.',
-  },
-  {
-    q: 'Do you accept unneutered cats?',
-    a: 'We accept neutered cats only to ensure the comfort and safety of all guests in our care.',
-  },
-  {
-    q: 'What vaccinations does my cat need?',
-    a: 'All cats must be up to date on their Feline Herpesvirus, Calicivirus, and Panleukopenia (FVRCP) vaccinations. Proof must be shown at check-in.',
-  },
-  {
-    q: "Can I bring my cat's own food and bedding?",
-    a: 'Absolutely — we encourage it! Familiar scents and food help cats settle in quickly. Bring whatever makes your cat feel at home.',
-  },
-  {
-    q: 'How often will I receive updates?',
-    a: "You'll receive at least one photo or video update per day. You can also message us anytime via WhatsApp for a quick check-in.",
-  },
-]
+import { useLanguage } from '@/components/providers/LanguageProvider'
 
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(null)
+  const { copy } = useLanguage()
 
   return (
     <section id="questions" className="px-4 py-20 md:px-6">
       <div className="mx-auto max-w-3xl">
-        <SectionLabel>Questions</SectionLabel>
+        <SectionLabel>{copy.faq.label}</SectionLabel>
         <h2 className="mb-12 font-serif text-4xl font-extrabold tracking-tight text-cch-black md:text-5xl">
-          Frequently Asked <em className="italic">Questions</em>
+          {copy.faq.title}
         </h2>
         <div className="space-y-3">
-          {faqs.map((faq, i) => (
+          {copy.faq.items.map((faq, i) => (
             <div key={i} className="soft-ui-card overflow-hidden rounded-[1.75rem]">
               <button
                 className="flex w-full items-center justify-between px-6 py-5 text-left"
