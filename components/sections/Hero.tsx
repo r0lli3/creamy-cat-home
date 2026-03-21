@@ -18,12 +18,6 @@ export function Hero() {
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(29,28,22,0.22)_0%,rgba(29,28,22,0.1)_18%,rgba(29,28,22,0.18)_40%,rgba(29,28,22,0.88)_100%)]" />
 
-            <div className="absolute inset-x-6 top-[calc(env(safe-area-inset-top)+6.25rem)]">
-              <span className="inline-flex rounded-full border border-white/28 bg-white/16 px-4 py-1.5 text-[0.68rem] font-bold uppercase tracking-[0.3em] text-white backdrop-blur-md">
-                Boutique Sanctuary
-              </span>
-            </div>
-
             <div className="absolute inset-x-6 bottom-[calc(env(safe-area-inset-bottom)+1.25rem)]">
               <div className="inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.28em] text-white/92 backdrop-blur">
                 Premium Cat Home
@@ -109,9 +103,6 @@ export function Hero() {
               </div>
 
               <div className="pointer-events-none absolute inset-x-8 bottom-9">
-                <span className="mb-3 inline-flex rounded-full border border-white/30 bg-white/20 px-3 py-1 text-[0.6rem] font-bold uppercase tracking-[0.28em] text-white backdrop-blur-md">
-                  Boutique Sanctuary
-                </span>
                 <h2 className="max-w-sm font-serif text-4xl font-extrabold leading-tight text-white drop-shadow">
                   The warmest place for your cat.
                 </h2>
