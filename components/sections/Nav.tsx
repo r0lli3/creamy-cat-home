@@ -25,7 +25,7 @@ export function Nav() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-3 md:px-6 md:pt-4">
       <div
-        className={`mx-auto max-w-6xl rounded-[1.9rem] border transition-all duration-300 md:rounded-[2.1rem] ${
+        className={`mx-auto w-full rounded-[1.9rem] border transition-all duration-300 md:rounded-[2.1rem] ${
           scrolled || open
             ? 'border-white/45 bg-[#fef9ef]/85 shadow-[0_18px_50px_-28px_rgba(34,28,22,0.2)] backdrop-blur-xl'
             : 'border-transparent bg-transparent shadow-none backdrop-blur-0'
@@ -47,7 +47,7 @@ export function Nav() {
             </a>
           </div>
 
-          <div className="pointer-events-none absolute left-[47%] -translate-x-1/2 md:left-1/2">
+          <div className="pointer-events-none absolute left-[43.5%] -translate-x-1/2 md:left-[42%]">
             <div className="relative h-[1.75rem] w-[19rem] md:h-[2.6rem] md:w-[27rem]">
               <Image
                 src="/textLogo.png"
@@ -68,15 +68,15 @@ export function Nav() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-1 md:flex-1 md:justify-end md:gap-3">
-            <div className="hidden items-center rounded-full border border-white/55 bg-white/60 p-1 backdrop-blur md:flex">
+          <div className="flex items-center gap-0.5 md:flex-1 md:justify-end md:gap-2">
+            <div className="hidden items-center rounded-full border border-white/55 bg-white/60 px-0.5 py-1 backdrop-blur md:flex">
               {languages.map(option => (
                 <button
                   key={option.value}
                   type="button"
                   aria-label={option.label}
                   aria-pressed={language === option.value}
-                  className={`flex h-[3.4rem] w-[3.4rem] items-center justify-center rounded-full text-[1.6rem] transition-colors ${
+                  className={`flex h-[3rem] w-[3rem] items-center justify-center rounded-full text-[1.4rem] transition-colors ${
                     language === option.value
                       ? 'bg-cch-primary/12 ring-1 ring-cch-primary/20'
                       : 'opacity-65 hover:opacity-100'
