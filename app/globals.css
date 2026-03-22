@@ -64,7 +64,7 @@
 }
 
 .animate-hero-gallery {
-  animation: hero-gallery-marquee 26s linear infinite;
+  animation: hero-gallery-marquee 39s linear infinite;
 }
 
 @keyframes book-glow {

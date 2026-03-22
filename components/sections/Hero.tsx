@@ -36,12 +36,12 @@ export function Hero() {
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(29,28,22,0.08)_0%,rgba(29,28,22,0.18)_18%,rgba(29,28,22,0.3)_44%,rgba(29,28,22,0.88)_100%)]" />
 
-            <div className="absolute inset-x-6 top-[9svh] flex flex-col items-center text-center">
+            <div className="absolute inset-x-6 top-[10svh] flex flex-col items-center text-center">
               <div className="mb-5 flex flex-nowrap justify-center gap-1.5">
-                <span className="whitespace-nowrap rounded-full border border-white/24 bg-white/10 px-2.5 py-1.5 text-[0.88rem] font-medium text-[#f8f2e8] shadow-[0_1px_10px_rgba(0,0,0,0.18)] backdrop-blur">
+                <span className="whitespace-nowrap rounded-full border border-white/24 bg-white/10 px-2.5 py-[0.7rem] text-[0.88rem] font-medium text-[#f8f2e8] shadow-[0_1px_10px_rgba(0,0,0,0.18)] backdrop-blur">
                   {copy.hero.pills[0]}
                 </span>
-                <span className="whitespace-nowrap rounded-full border border-white/24 bg-white/10 px-2.5 py-1.5 text-[0.88rem] font-medium text-[#f8f2e8] shadow-[0_1px_10px_rgba(0,0,0,0.18)] backdrop-blur">
+                <span className="whitespace-nowrap rounded-full border border-white/24 bg-white/10 px-2.5 py-[0.7rem] text-[0.88rem] font-medium text-[#f8f2e8] shadow-[0_1px_10px_rgba(0,0,0,0.18)] backdrop-blur">
                   {copy.hero.pills[1]}
                 </span>
               </div>
@@ -82,11 +82,11 @@ export function Hero() {
 
         <div className="hidden md:grid md:grid-cols-[1.02fr_0.98fr] md:items-center md:gap-8">
           <FadeIn className="md:block">
-            <div className="flex flex-nowrap gap-2">
-              <span className="whitespace-nowrap rounded-full border border-white/50 bg-white/55 px-3 py-1.5 text-[0.95rem] font-medium text-cch-muted backdrop-blur">
+            <div className="mt-2 flex flex-nowrap gap-2">
+              <span className="whitespace-nowrap rounded-full border border-white/50 bg-white/55 px-3 py-[0.7rem] text-[0.95rem] font-medium text-cch-muted backdrop-blur">
                 {copy.hero.pills[0]}
               </span>
-              <span className="whitespace-nowrap rounded-full border border-white/50 bg-white/55 px-3 py-1.5 text-[0.95rem] font-medium text-cch-muted backdrop-blur">
+              <span className="whitespace-nowrap rounded-full border border-white/50 bg-white/55 px-3 py-[0.7rem] text-[0.95rem] font-medium text-cch-muted backdrop-blur">
                 {copy.hero.pills[1]}
               </span>
             </div>

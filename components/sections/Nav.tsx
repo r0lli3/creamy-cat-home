@@ -28,7 +28,7 @@ export function Nav() {
         className={`mx-auto max-w-6xl rounded-[1.9rem] border transition-all duration-300 md:rounded-[2.1rem] ${
           scrolled || open
             ? 'border-white/45 bg-[#fef9ef]/85 shadow-[0_18px_50px_-28px_rgba(34,28,22,0.2)] backdrop-blur-xl'
-            : 'border-white/35 bg-[#fef9ef]/60 shadow-[0_18px_50px_-34px_rgba(110,89,46,0.16)] backdrop-blur-xl'
+            : 'border-transparent bg-transparent shadow-none backdrop-blur-0'
         }`}
       >
         <div className="relative flex h-[4.35rem] items-center justify-between px-4 md:h-[5rem] md:px-6">
