@@ -172,7 +172,7 @@ export const siteCopy = {
         },
         connect: {
           heading: 'Connect',
-          links: ['Book a Stay', 'Instagram', 'LINE', 'WhatsApp'],
+          links: ['Book a Stay', 'Instagram', 'TikTok', 'LINE'],
         },
         legal: {
           heading: 'Legal',
@@ -353,7 +353,7 @@ export const siteCopy = {
         },
         connect: {
           heading: 'ติดต่อ',
-          links: ['จองเข้าพัก', 'Instagram', 'LINE', 'WhatsApp'],
+          links: ['จองเข้าพัก', 'Instagram', 'TikTok', 'LINE'],
         },
         legal: {
           heading: 'ข้อมูลสำคัญ',
@@ -540,7 +540,7 @@ export const siteCopy = {
         },
         connect: {
           heading: 'つながる',
-          links: ['宿泊を予約', 'Instagram', 'LINE', 'WhatsApp'],
+          links: ['宿泊を予約', 'Instagram', 'TikTok', 'LINE'],
         },
         legal: {
           heading: '法務',
