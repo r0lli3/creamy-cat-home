@@ -23,23 +23,23 @@ export function Nav() {
   }, [])
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 md:px-6">
+    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-3 md:px-6 md:pt-4">
       <div
-        className={`mx-auto max-w-6xl rounded-[1.5rem] border transition-all duration-300 ${
+        className={`mx-auto max-w-6xl rounded-[1.3rem] border transition-all duration-300 md:rounded-[1.5rem] ${
           scrolled || open
             ? 'border-white/45 bg-[#fef9ef]/85 shadow-[0_18px_50px_-28px_rgba(34,28,22,0.2)] backdrop-blur-xl'
             : 'border-white/35 bg-[#fef9ef]/60 shadow-[0_18px_50px_-34px_rgba(110,89,46,0.16)] backdrop-blur-xl'
         }`}
       >
-        <div className="relative flex h-[4.5rem] items-center justify-between px-4 md:px-6">
+        <div className="relative flex h-[3.85rem] items-center justify-between px-4 md:h-[4.5rem] md:px-6">
           <div className="flex items-center md:flex-1">
             <a href="#home" aria-label={copy.nav.brand} className="flex items-center gap-2.5">
-              <div className="relative h-10 w-10 flex-shrink-0">
+              <div className="relative h-8 w-8 flex-shrink-0 md:h-10 md:w-10">
                 <Image
                   src="/creamyCatLogoTrans.png"
                   alt={`${copy.nav.brand} logo`}
                   fill
-                  sizes="40px"
+                  sizes="(max-width: 768px) 32px, 40px"
                   className="object-contain"
                   priority
                 />
@@ -48,7 +48,7 @@ export function Nav() {
           </div>
 
           <div className="pointer-events-none absolute left-[46.75%] -translate-x-1/2 md:left-1/2">
-            <span className="font-serif text-[0.9rem] font-extrabold italic tracking-tight text-brand-glow md:text-lg">
+            <span className="font-serif text-[0.82rem] font-extrabold italic tracking-tight text-brand-glow md:text-lg">
               {copy.nav.brand}
             </span>
           </div>
@@ -87,7 +87,7 @@ export function Nav() {
                   type="button"
                   aria-label={option.label}
                   aria-pressed={language === option.value}
-                  className={`flex h-6 w-6 items-center justify-center rounded-full text-[0.9rem] transition-transform ${
+                  className={`flex h-5 w-5 items-center justify-center rounded-full text-[0.82rem] transition-transform ${
                     language === option.value
                       ? 'scale-110'
                       : 'opacity-70 hover:opacity-100'
@@ -101,12 +101,12 @@ export function Nav() {
             <Button href="#contact" className="hidden md:inline-flex">{copy.nav.book}</Button>
             <button
               aria-label="Toggle menu"
-              className="flex h-10 w-8 flex-col items-end justify-center gap-1.5 md:hidden"
+              className="flex h-8 w-7 flex-col items-end justify-center gap-1.5 md:hidden"
               onClick={() => setOpen(o => !o)}
             >
-              <span className={`block h-[2px] w-5 rounded-full transition-all ${scrolled || open ? 'bg-[#8B7347]' : 'bg-[#8B7347]'} ${open ? 'translate-y-2 rotate-45' : ''}`} />
-              <span className={`block h-[2px] w-5 rounded-full transition-all ${scrolled || open ? 'bg-[#8B7347]' : 'bg-[#8B7347]'} ${open ? 'opacity-0' : ''}`} />
-              <span className={`block h-[2px] w-5 rounded-full transition-all ${scrolled || open ? 'bg-[#8B7347]' : 'bg-[#8B7347]'} ${open ? '-translate-y-2 -rotate-45' : ''}`} />
+              <span className={`block h-[2px] w-[1.15rem] rounded-full transition-all ${scrolled || open ? 'bg-[#8B7347]' : 'bg-[#8B7347]'} ${open ? 'translate-y-2 rotate-45' : ''}`} />
+              <span className={`block h-[2px] w-[1.15rem] rounded-full transition-all ${scrolled || open ? 'bg-[#8B7347]' : 'bg-[#8B7347]'} ${open ? 'opacity-0' : ''}`} />
+              <span className={`block h-[2px] w-[1.15rem] rounded-full transition-all ${scrolled || open ? 'bg-[#8B7347]' : 'bg-[#8B7347]'} ${open ? '-translate-y-2 -rotate-45' : ''}`} />
             </button>
           </div>
         </div>
