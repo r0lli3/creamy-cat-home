@@ -31,15 +31,15 @@ export function Nav() {
             : 'border-transparent bg-transparent shadow-none backdrop-blur-0'
         }`}
       >
-        <div className="relative flex h-[4.35rem] items-center justify-between px-4 md:h-[5rem] md:px-6">
+        <div className="relative flex h-[6.5rem] items-center justify-between px-5 md:h-[7rem] md:px-7">
           <div className="flex items-center md:flex-1">
             <a href="#home" aria-label={copy.nav.brand} className="flex items-center gap-2.5">
-              <div className="relative h-10 w-10 flex-shrink-0 md:h-12 md:w-12">
+              <div className="relative h-[3.75rem] w-[3.75rem] flex-shrink-0 md:h-[4.5rem] md:w-[4.5rem]">
                 <Image
                   src="/creamyCatLogoTrans.png"
                   alt={`${copy.nav.brand} logo`}
                   fill
-                  sizes="(max-width: 768px) 40px, 48px"
+                  sizes="(max-width: 768px) 60px, 72px"
                   className="object-contain"
                   priority
                 />
@@ -48,12 +48,12 @@ export function Nav() {
           </div>
 
           <div className="pointer-events-none absolute left-[47%] -translate-x-1/2 md:left-1/2">
-            <div className="relative h-[1.15rem] w-[12.8rem] md:h-[1.75rem] md:w-[18rem]">
+            <div className="relative h-[1.75rem] w-[19rem] md:h-[2.6rem] md:w-[27rem]">
               <Image
                 src="/textLogo.png"
                 alt={copy.nav.brand}
                 fill
-                sizes="(max-width: 768px) 205px, 288px"
+                sizes="(max-width: 768px) 304px, 432px"
                 className="object-contain"
                 priority
               />
@@ -76,7 +76,7 @@ export function Nav() {
                   type="button"
                   aria-label={option.label}
                   aria-pressed={language === option.value}
-                  className={`flex h-9 w-9 items-center justify-center rounded-full text-lg transition-colors ${
+                  className={`flex h-[3.4rem] w-[3.4rem] items-center justify-center rounded-full text-[1.6rem] transition-colors ${
                     language === option.value
                       ? 'bg-cch-primary/12 ring-1 ring-cch-primary/20'
                       : 'opacity-65 hover:opacity-100'
@@ -94,7 +94,7 @@ export function Nav() {
                   type="button"
                   aria-label={option.label}
                   aria-pressed={language === option.value}
-                  className={`flex h-5 w-5 items-center justify-center rounded-full text-[0.82rem] transition-transform ${
+                  className={`flex h-[1.9rem] w-[1.9rem] items-center justify-center rounded-full text-[1.2rem] transition-transform ${
                     language === option.value
                       ? 'scale-110'
                       : 'opacity-70 hover:opacity-100'
@@ -108,12 +108,12 @@ export function Nav() {
             <Button href="#contact" className="hidden md:inline-flex">{copy.nav.book}</Button>
             <button
               aria-label="Toggle menu"
-              className="flex h-8 w-7 flex-col items-end justify-center gap-1.5 md:hidden"
+              className="flex h-12 w-11 flex-col items-end justify-center gap-2 md:hidden"
               onClick={() => setOpen(o => !o)}
             >
-              <span className={`block h-[2px] w-[1.15rem] rounded-full transition-all ${scrolled || open ? 'bg-[#8B7347]' : 'bg-[#8B7347]'} ${open ? 'translate-y-2 rotate-45' : ''}`} />
-              <span className={`block h-[2px] w-[1.15rem] rounded-full transition-all ${scrolled || open ? 'bg-[#8B7347]' : 'bg-[#8B7347]'} ${open ? 'opacity-0' : ''}`} />
-              <span className={`block h-[2px] w-[1.15rem] rounded-full transition-all ${scrolled || open ? 'bg-[#8B7347]' : 'bg-[#8B7347]'} ${open ? '-translate-y-2 -rotate-45' : ''}`} />
+              <span className={`block h-[3px] w-[1.8rem] rounded-full transition-all ${scrolled || open ? 'bg-[#8B7347]' : 'bg-[#8B7347]'} ${open ? 'translate-y-[0.68rem] rotate-45' : ''}`} />
+              <span className={`block h-[3px] w-[1.8rem] rounded-full transition-all ${scrolled || open ? 'bg-[#8B7347]' : 'bg-[#8B7347]'} ${open ? 'opacity-0' : ''}`} />
+              <span className={`block h-[3px] w-[1.8rem] rounded-full transition-all ${scrolled || open ? 'bg-[#8B7347]' : 'bg-[#8B7347]'} ${open ? '-translate-y-[0.68rem] -rotate-45' : ''}`} />
             </button>
           </div>
         </div>
