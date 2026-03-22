@@ -41,7 +41,7 @@ export function Hero() {
                 </span>
               </div>
 
-              <div className="mt-6 mb-4 grid grid-cols-2 gap-2.5">
+              <div className="mt-6 mb-12 grid grid-cols-2 gap-2.5">
                 <Button
                   href="#services"
                   variant="outline"
@@ -49,7 +49,7 @@ export function Hero() {
                 >
                   {copy.hero.ctaServices}
                 </Button>
-                <Button href="#contact" className="mr-16 justify-center py-4 text-base">{copy.hero.ctaBook}</Button>
+                <Button href="#contact" className="justify-center py-4 text-base">{copy.hero.ctaBook}</Button>
               </div>
             </div>
           </div>

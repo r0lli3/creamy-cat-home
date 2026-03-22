@@ -1,6 +1,5 @@
 'use client'
 
-import { IconBox } from '@/components/ui/IconBox'
 import { FadeIn } from '@/components/ui/FadeIn'
 import { useLanguage } from '@/components/providers/LanguageProvider'
 
@@ -13,7 +12,6 @@ export function Testimonial() {
         <FadeIn>
           <div className="soft-ui-card relative overflow-hidden rounded-[2rem] p-8 md:p-10">
             <div className="absolute left-4 top-0 text-[7rem] leading-none text-cch-primary/5">&ldquo;</div>
-            <IconBox size="md" className="mb-6">&ldquo;</IconBox>
             <blockquote className="relative mb-8 font-serif text-3xl font-extrabold leading-tight text-cch-black md:text-4xl">
               {copy.testimonial.quote}
             </blockquote>
