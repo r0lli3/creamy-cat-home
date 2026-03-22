@@ -69,13 +69,13 @@
 
 @keyframes book-glow {
   0%, 100% {
-    box-shadow: 0 18px 30px -18px rgba(87, 68, 27, 0.75), 0 0 0 rgba(223, 202, 155, 0);
+    box-shadow: 0 18px 30px -18px rgba(87, 68, 27, 0.78), 0 0 0 rgba(223, 202, 155, 0);
   }
   50% {
-    box-shadow: 0 20px 34px -18px rgba(87, 68, 27, 0.82), 0 0 24px rgba(223, 202, 155, 0.18);
+    box-shadow: 0 22px 36px -18px rgba(87, 68, 27, 0.86), 0 0 30px rgba(223, 202, 155, 0.24);
   }
 }
 
 .animate-book-glow {
-  animation: book-glow 3.2s ease-in-out infinite;
+  animation: book-glow 2.8s ease-in-out infinite;
 }
