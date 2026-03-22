@@ -167,7 +167,7 @@ export const siteCopy = {
       description: 'A warm, loving home-away-from-home for your cat. Real care from people who truly love cats.',
       sections: {
         navigate: {
-          heading: 'Navigate',
+          heading: 'Pages',
           links: ['Home', 'About', 'Services', 'Gallery'],
         },
         connect: {
@@ -175,7 +175,7 @@ export const siteCopy = {
           links: ['Book Now', 'Instagram', 'TikTok', 'LINE'],
         },
         legal: {
-          heading: 'Legal',
+          heading: 'Info',
           links: ['Privacy Policy', 'Terms of Service', 'Contact'],
         },
       },

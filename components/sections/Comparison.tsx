@@ -18,7 +18,7 @@ export function Comparison() {
         </FadeIn>
         <FadeIn delay={0.1}>
           <div className="grid gap-5 md:grid-cols-2">
-            <div className="soft-ui-card rounded-[2rem] p-7">
+            <div className="soft-ui-card rounded-[2.4rem] p-7">
               <h3 className="mb-6 text-sm font-semibold uppercase tracking-[0.28em] text-cch-black/40">{copy.comparison.other}</h3>
               <ul className="space-y-4">
                 {copy.comparison.rows.map(r => (
@@ -30,7 +30,7 @@ export function Comparison() {
               </ul>
             </div>
 
-            <div className="soft-ui-card-dark rounded-[2rem] p-7">
+            <div className="soft-ui-card-dark rounded-[2.4rem] p-7">
               <h3 className="mb-6 text-sm font-semibold uppercase tracking-[0.28em] text-cch-parchment/60">{copy.comparison.ours}</h3>
               <ul className="space-y-4">
                 {copy.comparison.rows.map(r => (

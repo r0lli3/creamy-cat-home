@@ -19,8 +19,8 @@ export function Process() {
         <FadeIn delay={0.1}>
           <div className="grid gap-5 md:grid-cols-3">
             {copy.process.steps.map((s, i) => (
-              <div key={s.title} className="soft-ui-card rounded-[1.8rem] p-6">
-                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-[1.2rem] border border-white/60 bg-white/65 text-2xl text-cch-primary">
+              <div key={s.title} className="soft-ui-card rounded-[2.2rem] p-6">
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-[1.5rem] border border-white/60 bg-white/65 text-2xl text-cch-primary">
                   {s.icon}
                 </div>
                 <p className="mb-2 text-xs font-bold uppercase tracking-[0.24em] text-cch-primary/70">{copy.process.stepLabel} {i + 1}</p>

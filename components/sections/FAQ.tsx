@@ -16,7 +16,7 @@ export function FAQ() {
         </h2>
         <div className="space-y-3">
           {copy.faq.items.map((faq, i) => (
-            <div key={i} className="soft-ui-card overflow-hidden rounded-[1.75rem]">
+            <div key={i} className="soft-ui-card overflow-hidden rounded-[2.2rem]">
               <button
                 className="flex w-full items-center justify-between px-6 py-5 text-left"
                 onClick={() => setOpen(open === i ? null : i)}

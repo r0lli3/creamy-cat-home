@@ -14,8 +14,8 @@ export function CTASection() {
     <section id="contact" className="px-4 py-20 md:px-6">
       <div className="mx-auto max-w-6xl">
         <FadeIn>
-          <div className="soft-ui-card rounded-[2rem] p-10 text-center md:p-16">
-            <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-[1.25rem] border border-white/50 bg-[linear-gradient(135deg,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0.64)_100%)] shadow-[0_16px_28px_-18px_rgba(110,89,46,0.3)]">
+          <div className="soft-ui-card rounded-[2.6rem] p-10 text-center md:p-16">
+            <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-[1.6rem] border border-white/50 bg-[linear-gradient(135deg,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0.64)_100%)] shadow-[0_16px_28px_-18px_rgba(110,89,46,0.3)]">
               <Image
                 src="/creamyCatLogoTrans.png"
                 alt={`${copy.nav.brand} logo`}

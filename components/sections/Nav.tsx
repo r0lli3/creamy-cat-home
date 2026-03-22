@@ -25,21 +25,21 @@ export function Nav() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-3 md:px-6 md:pt-4">
       <div
-        className={`mx-auto max-w-6xl rounded-[1.3rem] border transition-all duration-300 md:rounded-[1.5rem] ${
+        className={`mx-auto max-w-6xl rounded-[1.9rem] border transition-all duration-300 md:rounded-[2.1rem] ${
           scrolled || open
             ? 'border-white/45 bg-[#fef9ef]/85 shadow-[0_18px_50px_-28px_rgba(34,28,22,0.2)] backdrop-blur-xl'
             : 'border-white/35 bg-[#fef9ef]/60 shadow-[0_18px_50px_-34px_rgba(110,89,46,0.16)] backdrop-blur-xl'
         }`}
       >
-        <div className="relative flex h-[3.85rem] items-center justify-between px-4 md:h-[4.5rem] md:px-6">
+        <div className="relative flex h-[4.35rem] items-center justify-between px-4 md:h-[5rem] md:px-6">
           <div className="flex items-center md:flex-1">
             <a href="#home" aria-label={copy.nav.brand} className="flex items-center gap-2.5">
-              <div className="relative h-8 w-8 flex-shrink-0 md:h-10 md:w-10">
+              <div className="relative h-10 w-10 flex-shrink-0 md:h-12 md:w-12">
                 <Image
                   src="/creamyCatLogoTrans.png"
                   alt={`${copy.nav.brand} logo`}
                   fill
-                  sizes="(max-width: 768px) 32px, 40px"
+                  sizes="(max-width: 768px) 40px, 48px"
                   className="object-contain"
                   priority
                 />
@@ -47,13 +47,13 @@ export function Nav() {
             </a>
           </div>
 
-          <div className="pointer-events-none absolute left-[46.75%] -translate-x-1/2 md:left-1/2">
-            <div className="relative h-[0.95rem] w-[10.4rem] md:h-[1.35rem] md:w-[14.75rem]">
+          <div className="pointer-events-none absolute left-[47%] -translate-x-1/2 md:left-1/2">
+            <div className="relative h-[1.15rem] w-[12.8rem] md:h-[1.75rem] md:w-[18rem]">
               <Image
                 src="/textLogo.png"
                 alt={copy.nav.brand}
                 fill
-                sizes="(max-width: 768px) 166px, 236px"
+                sizes="(max-width: 768px) 205px, 288px"
                 className="object-contain"
                 priority
               />
@@ -122,7 +122,7 @@ export function Nav() {
       {open && (
         <nav
           aria-label="mobile"
-          className="mx-auto mt-3 flex max-w-6xl flex-col gap-4 rounded-[1.8rem] border border-white/45 bg-[#fef9ef]/90 px-5 py-5 shadow-[0_24px_60px_-36px_rgba(34,28,22,0.24)] backdrop-blur-xl md:hidden"
+          className="mx-auto mt-3 flex max-w-6xl flex-col gap-4 rounded-[2.1rem] border border-white/45 bg-[#fef9ef]/90 px-5 py-5 shadow-[0_24px_60px_-36px_rgba(34,28,22,0.24)] backdrop-blur-xl md:hidden"
         >
           <div className="flex items-center gap-2">
             {languages.map(option => (

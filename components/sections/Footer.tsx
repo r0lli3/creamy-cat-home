@@ -67,7 +67,7 @@ export function Footer() {
 
   return (
     <footer className="px-4 pb-10 pt-6 md:px-6">
-      <div className="mx-auto max-w-6xl rounded-[2rem] border border-white/45 bg-white/45 px-6 py-10 backdrop-blur md:px-8 md:py-14">
+      <div className="mx-auto max-w-6xl rounded-[2.5rem] border border-white/45 bg-white/45 px-6 py-10 backdrop-blur md:px-8 md:py-14">
         <div className="mb-10 grid gap-8 md:mb-12 md:grid-cols-5 md:gap-10">
           <div className="md:col-span-2">
             <div className="mb-4 flex items-center gap-2.5">

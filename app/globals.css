@@ -57,3 +57,25 @@
 .animate-marquee {
   animation: marquee 28s linear infinite;
 }
+
+@keyframes hero-gallery-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-hero-gallery {
+  animation: hero-gallery-marquee 26s linear infinite;
+}
+
+@keyframes book-glow {
+  0%, 100% {
+    box-shadow: 0 18px 30px -18px rgba(87, 68, 27, 0.75), 0 0 0 rgba(223, 202, 155, 0);
+  }
+  50% {
+    box-shadow: 0 20px 34px -18px rgba(87, 68, 27, 0.82), 0 0 24px rgba(223, 202, 155, 0.18);
+  }
+}
+
+.animate-book-glow {
+  animation: book-glow 3.2s ease-in-out infinite;
+}

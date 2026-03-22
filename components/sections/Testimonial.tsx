@@ -10,7 +10,7 @@ export function Testimonial() {
     <section className="px-4 py-20 md:px-6">
       <div className="mx-auto max-w-4xl">
         <FadeIn>
-          <div className="soft-ui-card relative overflow-hidden rounded-[2rem] p-8 md:p-10">
+          <div className="soft-ui-card relative overflow-hidden rounded-[2.5rem] p-8 md:p-10">
             <div className="absolute left-4 top-0 text-[7rem] leading-none text-cch-primary/5">&ldquo;</div>
             <blockquote className="relative mb-8 font-serif text-3xl font-extrabold leading-tight text-cch-black md:text-4xl">
               {copy.testimonial.quote}

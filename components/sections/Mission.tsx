@@ -12,7 +12,7 @@ export function Mission() {
     <section id="about" className="px-4 py-10 md:px-6 md:py-16">
       <div className="mx-auto max-w-6xl">
         <FadeIn>
-          <div className="soft-ui-card rounded-[2rem] p-8 md:p-14">
+          <div className="soft-ui-card rounded-[2.5rem] p-8 md:p-14">
             <SectionLabel>{copy.mission.label}</SectionLabel>
             <h2 className="mb-8 max-w-2xl font-serif text-4xl font-extrabold tracking-tight text-cch-black md:text-5xl">
               {copy.mission.title}
