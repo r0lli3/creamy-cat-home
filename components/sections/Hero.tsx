@@ -54,7 +54,7 @@ export function Hero() {
                 {copy.hero.body}
               </p>
 
-              <div className="mt-6 w-[calc(100%+1.5rem)] overflow-hidden">
+              <div className="relative left-1/2 mt-6 w-screen -translate-x-1/2 overflow-hidden">
                 <div className="animate-hero-gallery flex w-max gap-2 pr-2">
                   {heroGalleryLoop.map((imageSrc, index) => (
                     <div

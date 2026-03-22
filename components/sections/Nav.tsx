@@ -23,7 +23,7 @@ export function Nav() {
   }, [])
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-3 md:px-6 md:pt-4">
+    <header className="fixed inset-x-0 top-0 z-50 px-1.5 pt-3 md:px-2.5 md:pt-4">
       <div
         className={`mx-auto w-full rounded-[1.9rem] border transition-all duration-300 md:rounded-[2.1rem] ${
           scrolled || open
@@ -31,7 +31,7 @@ export function Nav() {
             : 'border-transparent bg-transparent shadow-none backdrop-blur-0'
         }`}
       >
-        <div className="relative flex h-[6.5rem] items-center justify-between px-5 md:h-[7rem] md:px-7">
+        <div className="relative flex h-[6.5rem] items-center justify-between px-3 md:h-[7rem] md:px-4">
           <div className="flex items-center md:flex-1">
             <a href="#home" aria-label={copy.nav.brand} className="flex items-center gap-2.5">
               <div className="relative h-[3.75rem] w-[3.75rem] flex-shrink-0 md:h-[4.5rem] md:w-[4.5rem]">
@@ -68,15 +68,15 @@ export function Nav() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-0.5 md:flex-1 md:justify-end md:gap-2">
-            <div className="hidden items-center rounded-full border border-white/55 bg-white/60 px-0.5 py-1 backdrop-blur md:flex">
+          <div className="flex items-center gap-0 md:flex-1 md:justify-end md:gap-1">
+            <div className="hidden items-center rounded-full border border-white/55 bg-white/60 px-[0.15rem] py-1 backdrop-blur md:flex">
               {languages.map(option => (
                 <button
                   key={option.value}
                   type="button"
                   aria-label={option.label}
                   aria-pressed={language === option.value}
-                  className={`flex h-[3rem] w-[3rem] items-center justify-center rounded-full text-[1.4rem] transition-colors ${
+                  className={`flex h-[2.7rem] w-[2.7rem] items-center justify-center rounded-full text-[1.3rem] transition-colors ${
                     language === option.value
                       ? 'bg-cch-primary/12 ring-1 ring-cch-primary/20'
                       : 'opacity-65 hover:opacity-100'
@@ -87,14 +87,14 @@ export function Nav() {
                 </button>
               ))}
             </div>
-            <div className="flex items-center gap-0.5 md:hidden">
+            <div className="flex items-center gap-0 md:hidden">
               {languages.map(option => (
                 <button
                   key={option.value}
                   type="button"
                   aria-label={option.label}
                   aria-pressed={language === option.value}
-                  className={`flex h-[1.9rem] w-[1.9rem] items-center justify-center rounded-full text-[1.2rem] transition-transform ${
+                  className={`flex h-[1.75rem] w-[1.75rem] items-center justify-center rounded-full text-[1.12rem] transition-transform ${
                     language === option.value
                       ? 'scale-110'
                       : 'opacity-70 hover:opacity-100'
