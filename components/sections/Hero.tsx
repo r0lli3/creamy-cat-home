@@ -37,11 +37,11 @@ export function Hero() {
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(29,28,22,0.08)_0%,rgba(29,28,22,0.18)_18%,rgba(29,28,22,0.3)_44%,rgba(29,28,22,0.88)_100%)]" />
 
             <div className="absolute inset-x-6 top-[9svh] flex flex-col items-center text-center">
-              <div className="mb-5 flex flex-wrap justify-center gap-2">
-                <span className="rounded-full border border-white/24 bg-white/10 px-3 py-1.5 text-[0.95rem] font-medium text-[#f8f2e8] shadow-[0_1px_10px_rgba(0,0,0,0.18)] backdrop-blur">
+              <div className="mb-5 flex flex-nowrap justify-center gap-1.5">
+                <span className="whitespace-nowrap rounded-full border border-white/24 bg-white/10 px-2.5 py-1.5 text-[0.88rem] font-medium text-[#f8f2e8] shadow-[0_1px_10px_rgba(0,0,0,0.18)] backdrop-blur">
                   {copy.hero.pills[0]}
                 </span>
-                <span className="rounded-full border border-white/24 bg-white/10 px-3 py-1.5 text-[0.95rem] font-medium text-[#f8f2e8] shadow-[0_1px_10px_rgba(0,0,0,0.18)] backdrop-blur">
+                <span className="whitespace-nowrap rounded-full border border-white/24 bg-white/10 px-2.5 py-1.5 text-[0.88rem] font-medium text-[#f8f2e8] shadow-[0_1px_10px_rgba(0,0,0,0.18)] backdrop-blur">
                   {copy.hero.pills[1]}
                 </span>
               </div>
@@ -59,13 +59,13 @@ export function Hero() {
                   {heroGalleryLoop.map((imageSrc, index) => (
                     <div
                       key={`${imageSrc}-${index}`}
-                      className="relative h-48 w-40 shrink-0 overflow-hidden rounded-[2rem] border border-white/25 bg-white/10 shadow-[0_18px_32px_-18px_rgba(0,0,0,0.45)] backdrop-blur"
+                      className="relative h-72 w-60 shrink-0 overflow-hidden rounded-[2rem] border border-white/25 bg-white/10 shadow-[0_18px_32px_-18px_rgba(0,0,0,0.45)] backdrop-blur"
                     >
                       <Image
                         src={imageSrc}
                         alt={`Creamy Cat Home gallery image ${(index % heroGallery.length) + 1}`}
                         fill
-                        sizes="160px"
+                        sizes="240px"
                         className="object-cover"
                       />
                     </div>
@@ -82,11 +82,11 @@ export function Hero() {
 
         <div className="hidden md:grid md:grid-cols-[1.02fr_0.98fr] md:items-center md:gap-8">
           <FadeIn className="md:block">
-            <div className="flex flex-wrap gap-2">
-              <span className="rounded-full border border-white/50 bg-white/55 px-3 py-1.5 text-[0.95rem] font-medium text-cch-muted backdrop-blur">
+            <div className="flex flex-nowrap gap-2">
+              <span className="whitespace-nowrap rounded-full border border-white/50 bg-white/55 px-3 py-1.5 text-[0.95rem] font-medium text-cch-muted backdrop-blur">
                 {copy.hero.pills[0]}
               </span>
-              <span className="rounded-full border border-white/50 bg-white/55 px-3 py-1.5 text-[0.95rem] font-medium text-cch-muted backdrop-blur">
+              <span className="whitespace-nowrap rounded-full border border-white/50 bg-white/55 px-3 py-1.5 text-[0.95rem] font-medium text-cch-muted backdrop-blur">
                 {copy.hero.pills[1]}
               </span>
             </div>
@@ -104,13 +104,13 @@ export function Hero() {
                 {heroGalleryLoop.map((imageSrc, index) => (
                   <div
                     key={`${imageSrc}-${index}`}
-                    className="relative h-52 w-44 shrink-0 overflow-hidden rounded-[2rem] border border-white/45 bg-white/55 shadow-[0_18px_30px_-18px_rgba(110,89,46,0.28)]"
+                    className="relative h-[19.5rem] w-[16.5rem] shrink-0 overflow-hidden rounded-[2rem] border border-white/45 bg-white/55 shadow-[0_18px_30px_-18px_rgba(110,89,46,0.28)]"
                   >
                     <Image
                       src={imageSrc}
                       alt={`Creamy Cat Home gallery image ${(index % heroGallery.length) + 1}`}
                       fill
-                      sizes="176px"
+                      sizes="264px"
                       className="object-cover"
                     />
                   </div>
