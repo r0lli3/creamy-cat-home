@@ -24,11 +24,7 @@ export function Hero() {
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(29,28,22,0.18)_0%,rgba(29,28,22,0.14)_18%,rgba(29,28,22,0.3)_42%,rgba(29,28,22,0.9)_100%)]" />
 
             <div className="absolute inset-x-6 bottom-[calc(env(safe-area-inset-bottom)+1.25rem)]">
-              <div className="inline-flex rounded-full border border-white/24 bg-white/10 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.28em] text-[#f8f2e8] shadow-[0_1px_10px_rgba(0,0,0,0.22)] backdrop-blur">
-                {copy.hero.eyebrow}
-              </div>
-
-              <h1 className="mt-4 max-w-[12ch] font-serif text-[clamp(3rem,13vw,4.35rem)] font-extrabold leading-[0.88] tracking-[-0.05em] text-[#fffaf0] drop-shadow-[0_2px_14px_rgba(0,0,0,0.22)]">
+              <h1 className="max-w-[12ch] font-serif text-[clamp(3rem,13vw,4.35rem)] font-extrabold leading-[0.88] tracking-[-0.05em] text-[#fffaf0] drop-shadow-[0_2px_14px_rgba(0,0,0,0.22)]">
                 {copy.hero.title}
               </h1>
 
@@ -45,7 +41,7 @@ export function Hero() {
                 </span>
               </div>
 
-              <div className="mt-6 grid grid-cols-2 gap-2.5">
+              <div className="mt-6 mb-4 grid grid-cols-2 gap-2.5">
                 <Button
                   href="#services"
                   variant="outline"
@@ -53,7 +49,7 @@ export function Hero() {
                 >
                   {copy.hero.ctaServices}
                 </Button>
-                <Button href="#contact" className="justify-center py-4 text-base">{copy.hero.ctaBook}</Button>
+                <Button href="#contact" className="mr-16 justify-center py-4 text-base">{copy.hero.ctaBook}</Button>
               </div>
             </div>
           </div>
@@ -61,10 +57,6 @@ export function Hero() {
 
         <div className="hidden md:grid md:grid-cols-[1.02fr_0.98fr] md:items-center md:gap-8">
           <FadeIn className="md:block">
-            <div className="mb-6 inline-flex rounded-full border border-white/50 bg-white/55 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.28em] text-cch-primary backdrop-blur">
-              {copy.hero.eyebrow}
-            </div>
-
             <h1 className="max-w-xl font-serif text-7xl font-extrabold leading-[0.95] tracking-tight text-cch-black">
               {copy.hero.title}
             </h1>
