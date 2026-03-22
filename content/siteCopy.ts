@@ -11,7 +11,7 @@ export const siteCopy = {
         { label: 'Services', href: '#services' },
         { label: 'Questions', href: '#questions' },
       ],
-      book: 'Book a Stay',
+      book: 'Book Now',
     },
     hero: {
       eyebrow: 'Premium Cat Home',
@@ -20,7 +20,7 @@ export const siteCopy = {
         "A warm, loving home-away-from-home for your cat while you're away. Personalised care, daily updates, and total peace of mind.",
       pills: ['Calm private rooms', 'Daily photo updates'],
       ctaServices: 'Explore Services',
-      ctaBook: 'Book a Stay',
+      ctaBook: 'Book Now',
       overlayTitle: 'The warmest place for your cat.',
       imageAlt: 'Cat being lovingly cared for at Creamy Cat Home',
     },
@@ -161,7 +161,7 @@ export const siteCopy = {
       label: 'Get started',
       title: "Your cat's home away from home starts right here",
       body: 'Book a free consultation and let us show you why hundreds of cat owners trust us every year.',
-      button: 'Book a Stay',
+      button: 'Book Now',
     },
     footer: {
       description: 'A warm, loving home-away-from-home for your cat. Real care from people who truly love cats.',
@@ -172,7 +172,7 @@ export const siteCopy = {
         },
         connect: {
           heading: 'Connect',
-          links: ['Book a Stay', 'Instagram', 'TikTok', 'LINE'],
+          links: ['Book Now', 'Instagram', 'TikTok', 'LINE'],
         },
         legal: {
           heading: 'Legal',

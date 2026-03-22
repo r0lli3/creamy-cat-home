@@ -6,6 +6,18 @@ import { FadeIn } from '@/components/ui/FadeIn'
 import { SocialProof } from '@/components/sections/SocialProof'
 import { useLanguage } from '@/components/providers/LanguageProvider'
 
+const heroImage = '/cats/hero-room.png'
+const heroGallery = [
+  '/cats/cat-01.png',
+  '/cats/cat-02.png',
+  '/cats/cat-03.png',
+  '/cats/cat-04.jpeg',
+  '/cats/cat-05.png',
+  '/cats/cat-06.jpeg',
+  '/cats/cat-07.png',
+  '/cats/cat-08.jpg',
+]
+
 export function Hero() {
   const { copy } = useLanguage()
 
@@ -15,16 +27,16 @@ export function Hero() {
         <FadeIn className="md:hidden">
           <div className="relative left-1/2 min-h-[100svh] w-screen -translate-x-1/2 overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1770489119613-c629b47063f2?auto=format&fit=crop&w=900&q=80"
+              src={heroImage}
               alt={copy.hero.imageAlt}
               fill
               priority
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(29,28,22,0.18)_0%,rgba(29,28,22,0.14)_18%,rgba(29,28,22,0.3)_42%,rgba(29,28,22,0.9)_100%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(29,28,22,0.08)_0%,rgba(29,28,22,0.18)_18%,rgba(29,28,22,0.3)_44%,rgba(29,28,22,0.88)_100%)]" />
 
-            <div className="absolute inset-x-6 bottom-[calc(env(safe-area-inset-bottom)+1.25rem)]">
-              <h1 className="max-w-[12ch] font-serif text-[clamp(3rem,13vw,4.35rem)] font-extrabold leading-[0.88] tracking-[-0.05em] text-[#fffaf0] drop-shadow-[0_2px_14px_rgba(0,0,0,0.22)]">
+            <div className="absolute inset-x-6 top-[11svh] flex flex-col items-center text-center">
+              <h1 className="max-w-[10ch] font-serif text-[clamp(3rem,13vw,4.35rem)] font-extrabold leading-[0.88] tracking-[-0.05em] text-[#fffaf0] drop-shadow-[0_2px_14px_rgba(0,0,0,0.22)]">
                 {copy.hero.title}
               </h1>
 
@@ -32,7 +44,7 @@ export function Hero() {
                 {copy.hero.body}
               </p>
 
-              <div className="mt-5 flex flex-wrap gap-2">
+              <div className="mt-5 flex flex-wrap justify-center gap-2">
                 <span className="rounded-full border border-white/24 bg-white/10 px-3 py-1.5 text-[0.95rem] font-medium text-[#f8f2e8] shadow-[0_1px_10px_rgba(0,0,0,0.18)] backdrop-blur">
                   {copy.hero.pills[0]}
                 </span>
@@ -41,15 +53,27 @@ export function Hero() {
                 </span>
               </div>
 
-              <div className="mt-6 mb-12 grid grid-cols-2 gap-2.5">
-                <Button
-                  href="#services"
-                  variant="outline"
-                  className="justify-center border-white/28 bg-white/14 py-4 text-base text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.18)] hover:bg-white/18 hover:text-white"
-                >
-                  {copy.hero.ctaServices}
-                </Button>
-                <Button href="#contact" className="justify-center py-4 text-base">{copy.hero.ctaBook}</Button>
+              <div className="mt-6 w-full overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                <div className="flex snap-x snap-mandatory gap-3 px-1">
+                  {heroGallery.map((imageSrc, index) => (
+                    <div
+                      key={imageSrc}
+                      className="relative h-28 w-24 shrink-0 snap-start overflow-hidden rounded-[1.35rem] border border-white/25 bg-white/10 shadow-[0_16px_28px_-18px_rgba(0,0,0,0.45)] backdrop-blur"
+                    >
+                      <Image
+                        src={imageSrc}
+                        alt={`Creamy Cat Home gallery image ${index + 1}`}
+                        fill
+                        sizes="96px"
+                        className="object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-6 w-full max-w-[19rem]">
+                <Button href="#contact" className="w-full justify-center py-4 text-base">{copy.hero.ctaBook}</Button>
               </div>
             </div>
           </div>
@@ -74,11 +98,27 @@ export function Hero() {
               </span>
             </div>
 
-            <div className="mt-8 grid gap-3 sm:max-w-md sm:grid-cols-2">
-              <Button href="#contact" className="justify-center py-4 text-base">{copy.hero.ctaBook}</Button>
-              <Button href="#services" variant="outline" className="justify-center py-4 text-base">
-                {copy.hero.ctaServices}
-              </Button>
+            <div className="mt-6 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              <div className="flex gap-3 pr-4">
+                {heroGallery.map((imageSrc, index) => (
+                  <div
+                    key={imageSrc}
+                    className="relative h-28 w-24 shrink-0 overflow-hidden rounded-[1.35rem] border border-white/45 bg-white/55 shadow-[0_16px_28px_-18px_rgba(110,89,46,0.28)]"
+                  >
+                    <Image
+                      src={imageSrc}
+                      alt={`Creamy Cat Home gallery image ${index + 1}`}
+                      fill
+                      sizes="96px"
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-8 sm:max-w-sm">
+              <Button href="#contact" className="w-full justify-center py-4 text-base">{copy.hero.ctaBook}</Button>
             </div>
           </FadeIn>
 
@@ -86,7 +126,7 @@ export function Hero() {
             <div className="editorial-shadow relative overflow-hidden rounded-[2rem] p-3 md:rounded-[2.25rem] md:p-4">
               <div className="relative aspect-[0.92] overflow-hidden rounded-[2rem]">
                 <Image
-                  src="https://images.unsplash.com/photo-1770489119613-c629b47063f2?auto=format&fit=crop&w=900&q=80"
+                  src={heroImage}
                   alt={copy.hero.imageAlt}
                   fill
                   priority

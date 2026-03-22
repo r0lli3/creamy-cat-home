@@ -48,9 +48,16 @@ export function Nav() {
           </div>
 
           <div className="pointer-events-none absolute left-[46.75%] -translate-x-1/2 md:left-1/2">
-            <span className="font-serif text-[0.82rem] font-extrabold italic tracking-tight text-brand-glow md:text-lg">
-              {copy.nav.brand}
-            </span>
+            <div className="relative h-[0.95rem] w-[10.4rem] md:h-[1.35rem] md:w-[14.75rem]">
+              <Image
+                src="/textLogo.png"
+                alt={copy.nav.brand}
+                fill
+                sizes="(max-width: 768px) 166px, 236px"
+                className="object-contain"
+                priority
+              />
+            </div>
           </div>
 
           <nav className="hidden items-center gap-7 md:flex md:flex-1 md:justify-center">
