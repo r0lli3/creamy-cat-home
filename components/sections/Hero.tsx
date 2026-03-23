@@ -36,7 +36,7 @@ export function Hero() {
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(29,28,22,0.08)_0%,rgba(29,28,22,0.18)_18%,rgba(29,28,22,0.3)_44%,rgba(29,28,22,0.88)_100%)]" />
 
-            <div className="absolute inset-x-6 top-[10svh] flex flex-col items-center text-center">
+            <div className="absolute inset-x-6 top-[calc(10svh+10px)] flex flex-col items-center text-center">
               <div className="mb-5 flex flex-nowrap justify-center gap-1.5">
                 <span className="whitespace-nowrap rounded-full border border-white/24 bg-white/10 px-2.5 py-[0.7rem] text-[0.88rem] font-medium text-[#f8f2e8] shadow-[0_1px_10px_rgba(0,0,0,0.18)] backdrop-blur">
                   {copy.hero.pills[0]}
